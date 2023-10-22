@@ -413,7 +413,7 @@
           const email = document.getElementById("formEmail").value.trim();
   
           if (!isValidEmail(email)) {
-              document.getElementById("newsletter-validation-message").textContent = "Please enter a valid email address.";
+              alert("Please enter a valid email address.");
               return false; // Prevent form submission
           }
   
