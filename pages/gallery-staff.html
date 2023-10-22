@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>delight Bar &amp; Restaurant | Free Bootstrap Website Template</title>
+    <title>Delight Bar &amp; Restaurant | Free Bootstrap Website Template</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Google Fonts -->
@@ -52,9 +52,6 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="register.html">Login</a>
             </li>
           </ul>
           <div class="ml-auto">
@@ -191,11 +188,11 @@
           <div class="col-md-3 h-100 border-left-custom">
             <h5 class="page-footer-title mt-3 mt-md-0">LOCATION</h5>
             <address>
-              delight Bar &amp; Seafood Restaurant<br>
+              Delight Bar &amp; Seafood Restaurant<br>
               24 Akti Kampani St.<br>
               846 00, Mykonos, Greece<br>
               <abbr title="Phone">P:</abbr> (123) 456-7890<br>
-              <abbr title="Email">E:</abbr> info@delight.com
+              <abbr title="Email">E:</abbr> info@Delight.com
             </address>
           </div>
           <div class="col-md-3 h-100 border-left-custom">
@@ -210,18 +207,18 @@
             <h5 class="page-footer-title mt-3 mt-md-0">NEWSLETTER</h5>
             <p>
               Complete the form to receive information on the latest events,
-              news and special offers at delight.
+              news and special offers at Delight.
             </p>
-            <form id="newsletter-form">
+            <form id="newsletter-form" onsubmit="return validateNewsletterForm()">
               <label class="sr-only" for="formEmail">Email</label>
-              <input type="email" class="form-control form-control-sm rounded" id="formEmail" placeholder="name@example.com">
+              <input type="email" class="form-control form-control-sm rounded" name="name" id="formEmail" placeholder="name@example.com">
               <button type="submit" class="btn btn-sm btn-outline-light btn-block mt-2">Subscribe</button>
             </form>
           </div>
         </div>
       </div>
       <div class="page-footer-copyright container-fluid text-center">
-        © 2023 delight Bar &amp; Restaurant.<br>
+        © 2023 Delight Bar &amp; Restaurant.<br>
       </div>
     </footer>
     <a id="back-to-top" class="back-to-top smooth-scroll" href="#top">
@@ -254,6 +251,24 @@
           $("#lightbox").hide();
         }
       });
+
+      // Vaidate email
+      function validateNewsletterForm() {
+          const email = document.getElementById("formEmail").value.trim();
+  
+          if (!isValidEmail(email)) {
+              alert("Please enter a valid email address.");
+              return false; // Prevent form submission
+          }
+  
+          // Form is valid; allow submission
+          return true;
+      }
+  
+      function isValidEmail(email) {
+          const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+          return emailRegex.test(email);
+      }
     </script>
   </body>
 </html>
