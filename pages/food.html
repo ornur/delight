@@ -149,10 +149,14 @@
         </div>
       </div>
     </div>
+    <!-- BUSKET BUTTON -->
+    <button id="goBusket" class="btn btn-light fixed-bottom float-right"
+      style="width: 7%; margin-left: 93%; display: none;"><i class="fa-solid fa-basket-shopping fa-2xl mb-4 ml-2"></i><i
+        class="fa-solid fa-arrow-down fa-2xl fa-bounce"></i></button>
+
 
     <!-- FOOD: DESCRIPTIONS -->
     <div class="food-descriptions container">
-
       <!-- BREAKFASTS -->
       <div id="breakfasts" class="food-category">
         <h2 class="banner">BREAKFASTS</h2>
@@ -173,6 +177,9 @@
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product1', 'ENGLISH BREAKFAST', 2400, 'Breakfast')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -188,13 +195,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name text-truncate">BOILED EGGS &amp; ASPARAGUS</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">3000₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product2', 'BOILED EGGS', 3000, 'Breakfast')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -210,13 +220,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">BANANA PORRIDGE</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">2600₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product3', 'BANANA PORRIDGE', 2600, 'Breakfast')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -238,13 +251,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">HAMBURGER</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">4930₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product4', 'HAMBURGER', 4930, 'Burgers')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -260,13 +276,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">CHEESEBURGER</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">2700₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product5', 'CHEESEBURGER', 2700, 'Burgers')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -282,13 +301,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">DOUBLE DECKER</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">3200₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product6', 'DOUBLE DECKER', 3200, 'Burgers')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -310,13 +332,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">MOUSAKA</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">4900₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product7', 'MOUSAKA', 4900, 'FLAVOURS OF CYPRUS')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -332,13 +357,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">SOUVLAKI</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">2500₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product8', 'SOUVLAKI', 2500, 'FLAVOURS OF CYPRUS')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -354,13 +382,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">STIFADO</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">2000₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product9', 'STIFADO', 2000, 'FLAVOURS OF CYPRUS')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -382,13 +413,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">T-BONE STEAK</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">2100₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product11', 'T-BONE STEAK', 2100, 'FROM THE GRILL')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -404,13 +438,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">RUMP STEAK</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">1700₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product12', 'RUMP STEAK', 1700, 'FROM THE GRILL')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -426,13 +463,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">SIRLOIN STEAK</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">5400₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product10', 'SIRLOIN STEAK', 1700, 'FROM THE GRILL')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -454,13 +494,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">SPAGHETTI BOLOGNESE</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">2800₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product13', 'SPAGHETTI BOLOGNESE', 2800, 'PASTA')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -476,13 +519,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">BEEF STROGANOFF</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">4200₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product14', 'BEEF STROGANOFF', 4200, 'PASTA')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -498,13 +544,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">FETTUCINE ALFREDO</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">3400₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product15', 'FETTUCINE ALFREDO', 3400, 'PASTA')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -526,13 +575,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">STEAK &amp; KIDNEY PIE</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">6400₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product16', 'STEAK &amp; KIDNEY PIE', 6400, 'PIES')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -548,13 +600,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">STEAK &amp; ALE PIE</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">4400₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product17', 'STEAK &amp; ALE PIE', 4400, 'PIES')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -570,13 +625,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">CHICKEN &amp; MUSHROOM PIE</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">3400₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product18', 'CHICKEN &amp; MUSHROOM PIE', 3400, 'PIES')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -598,13 +656,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">PEPPERONI</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">5400₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product19', 'PEPPERONI', 5400, 'PIZZAS')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -620,13 +681,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">MARGARITA</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">2500₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product20', 'MARGARITA', 2500, 'PIZZAS')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -642,13 +706,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">TROPICANO</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">1400₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product21', 'TROPICANO', 1400, 'PIZZAS')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -670,13 +737,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">EGG SALAD</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">1400₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product22', 'EGG SALAD', 1400, 'SALADS')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -692,13 +762,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">POTATO SALAD</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">2300₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product23', 'POTATO SALAD', 2300, 'SALADS')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -714,13 +787,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">POMEGRANATE SALAD</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">1300₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product24', 'POMEGRANATE SALAD', 1300, 'SALADS')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -742,13 +818,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">GRILLED OCTOPUS</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">4000₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product25', 'GRILLED OCTOPUS', 4000, 'SEAFOOD')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -764,13 +843,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">FRIED SHRIMP &amp; SQUID</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">1500₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product26', 'FRIED SHRIMP &amp; SQUID', 1500, 'SEAFOOD')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -786,13 +868,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">BAKED SALMON</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">1100₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product27', 'BAKED SALMON', 1100, 'SEAFOOD')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -814,13 +899,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">EGGS ROYALE</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">1700₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product28', 'EGGS ROYALE', 1700, 'SPECIALS')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -836,13 +924,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">SMOKED SALMON CRISPS</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">2200₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product29', 'SMOKED SALMON CRISPS', 2200, 'SPECIALS')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -858,13 +949,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">BRAISED SHORT RIBS</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">4300₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product30', 'BRAISED SHORT RIBS', 4300, 'SPECIALS')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -886,13 +980,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">PRAWN COCKTAIL</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">5500₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product31', 'PRAWN COCKTAIL', 5500, 'STARTERS')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -908,13 +1005,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">FRIED MOZZARELLA STICKS</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">4100₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product32', 'FRIED MOZZARELLA STICKS', 4100, 'STARTERS')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -930,13 +1030,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">GARLIC BREAD</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">4400₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product33', 'GARLIC BREAD', 4400, 'STARTERS')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -958,13 +1061,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">VEGGIE BURGER</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">4500₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product34', 'VEGGIE BURGER', 4500, 'VEGETARIAN MEALS')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -980,13 +1086,16 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">COURGETTE CARPACCIO</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">4500₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product35', 'COURGETTE CARPACCIO', 4500, 'VEGETARIAN MEALS')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -999,18 +1108,42 @@
           <div class="col-md-9">
             <h3 class="food-title">
               <span class="food-name">MUSHROOM RISOTTO</span>
-              <span class="food-price float-right">2400₸.</span>
+              <span class="food-price float-right">3300₸.</span>
             </h3>
             <p class="food-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product36', 'MUSHROOM RISOTTO', 3300, 'VEGETARIAN MEALS')">Add to
+              Basket</button>
           </div>
         </div>
       </div>
 
     </div>
+    <div class="wooden-image">
+      <div id="busket" style="width: 70%;" class="table-responsive mx-auto pt-5">
+        <h2>Shopping Basket</h2>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Product Name</th>
+              <th scope="col">Product Type</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody id="basket">
+          </tbody>
+        </table>
+        <p>Total Price: <span id="totalPrice">0₸</span></p>
+
+        <button class="btn btn-success float-right mb-4" onclick="checkout()">Checkout</button>
+      </div>
+    </div>
+
   </main>
   <footer class="page-footer">
     <div class="container">
@@ -1094,6 +1227,82 @@
     function isValidEmail(email) {
       const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
       return emailRegex.test(email);
+    }
+    //Busket JS
+    let basket = [];
+
+    function addToBasket(productId, productName, productPrice, productType) {
+      const existingItem = basket.find(item => item.id === productId);
+      if (existingItem) {
+        existingItem.quantity++;
+      } else {
+        basket.push({ id: productId, name: productName, price: productPrice, quantity: 1, type: productType });
+      }
+
+      updateBasket();
+      document.getElementById('goBusket').style.display = 'block';
+
+    }
+    function removeFromBasket(productId) {
+      const index = basket.findIndex(item => item.id === productId);
+      if (index !== -1) {
+        basket.splice(index, 1);
+      }
+
+      updateBasket();
+    }
+
+    function updateBasket() {
+      const basketElement = document.getElementById('basket');
+      const totalPriceElement = document.getElementById('totalPrice');
+      basketElement.innerHTML = '';
+      let totalPrice = 0;
+
+      basket.forEach(item => {
+        const row = basketElement.insertRow();
+        const nameCell = row.insertCell(0);
+        const typeCell = row.insertCell(1);
+        const quantityCell = row.insertCell(2);
+        const priceCell = row.insertCell(3);
+
+        nameCell.textContent = item.name;
+        typeCell.textContent = item.type;
+        quantityCell.textContent = item.quantity;
+        priceCell.textContent = `${item.price * item.quantity}₸`;
+        totalPrice += item.price * item.quantity;
+
+        const removeButton = document.createElement('button');
+        removeButton.innerHTML = '<i class="fa-solid fa-trash fa-lg" style="color: #ff1414;"></i>';
+        removeButton.className = 'btn btn-outline-danger';
+        removeButton.onclick = function () {
+          removeFromBasket(item.id);
+        };
+        priceCell.appendChild(removeButton);
+      });
+
+      totalPriceElement.textContent = `${totalPrice}₸`;
+    }
+
+    function checkout() {
+      alert('Thank you for your purchase!');
+      basket = [];
+      updateBasket();
+    }
+
+    //Scroll to Busket
+    const scrollToBusketButton = document.getElementById('goBusket');
+
+    // Scroll to the top when the button is clicked
+    scrollToBusketButton.onclick = function () {
+      scrollToBusket('busket');
+    };
+
+    function scrollToBusket(id) {
+      const element = document.getElementById(id);
+
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   </script>
 </body>
