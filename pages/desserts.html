@@ -128,6 +128,11 @@
       </div>
     </div>
 
+    <!-- BUSKET BUTTON -->
+    <button id="goBusket" class="btn btn-light fixed-bottom float-right"
+      style="width: 7%; margin-left: 93%; display: none;"><i class="fa-solid fa-basket-shopping fa-2xl mb-4 ml-2"></i><i
+        class="fa-solid fa-arrow-down fa-2xl fa-bounce"></i></button>
+
     <!-- DESSERTS: DESCRIPTIONS -->
     <div class="desserts-descriptions container">
 
@@ -144,13 +149,16 @@
           <div class="col-md-9">
             <h3 class="dessert-title">
               <span class="dessert-name">CHEESECAKE</span>
-              <span class="dessert-price float-right">2400₸.</span>
+              <span class="dessert-price float-right">1200₸.</span>
             </h3>
             <p class="dessert-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+              onclick="addToBasket('product1', 'CHEESECAKE', 1200, 'CAKES')">Add to
+              Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -163,13 +171,16 @@
           <div class="col-md-9">
             <h3 class="dessert-title">
               <span class="dessert-name">CARROT CAKE</span>
-              <span class="dessert-price float-right">2400₸.</span>
+              <span class="dessert-price float-right">1500₸.</span>
             </h3>
             <p class="dessert-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product2', 'CARROT CAKE', 1500, 'CAKES')">Add to
+            Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -182,13 +193,16 @@
           <div class="col-md-9">
             <h3 class="dessert-title">
               <span class="dessert-name">BANANA PORRIDGE</span>
-              <span class="dessert-price float-right">2400₸.</span>
+              <span class="dessert-price float-right">1700₸.</span>
             </h3>
             <p class="dessert-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product3', 'BANANA PORRIDGE', 1700, 'CAKES')">Add to
+            Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -207,13 +221,16 @@
           <div class="col-md-9">
             <h3 class="dessert-title">
               <span class="dessert-name">CHOCOLATE CHIP COOKIES</span>
-              <span class="dessert-price float-right">2400₸.</span>
+              <span class="dessert-price float-right">2000₸.</span>
             </h3>
             <p class="dessert-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product4', 'CHOCOLATE CHIP COOKIES', 2000, 'COOKIES')">Add to
+            Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -226,13 +243,17 @@
           <div class="col-md-9">
             <h3 class="dessert-title">
               <span class="dessert-name">BISCOTTI</span>
-              <span class="dessert-price float-right">2400₸.</span>
+              <span class="dessert-price float-right">1500₸.</span>
             </h3>
             <p class="dessert-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product5', 'BISCOTTI', 1500, 'COOKIES')">Add to
+            Basket</button>
+          </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -245,17 +266,19 @@
           <div class="col-md-9">
             <h3 class="dessert-title">
               <span class="dessert-name">NUT COOKIES</span>
-              <span class="dessert-price float-right">2400₸.</span>
+              <span class="dessert-price float-right">1900₸.</span>
             </h3>
             <p class="dessert-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product6', 'NUT COOKIES', 1900, 'COOKIES')">Add to
+            Basket</button>
           </div>
         </div>
-        <hr class="dessert-horizontal-rule">
-      </div>
+        <hr class="dessert-horizontal-rule">  
 
       <!-- FLAVOURS OF CYPRUS -->
       <div id="flavours-of-cyprus-desserts" class="dessert-category">
@@ -270,13 +293,16 @@
           <div class="col-md-9">
             <h3 class="dessert-title">
               <span class="dessert-name">MAHALEBI</span>
-              <span class="dessert-price float-right">2400₸.</span>
+              <span class="dessert-price float-right">2200₸.</span>
             </h3>
             <p class="dessert-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product7', 'MAHALEBI', 2200, 'FLAVOURS OF CYPRUS')">Add to
+            Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -296,6 +322,9 @@
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product8', 'RIZOGALO', 2400, 'FLAVOURS OF CYPRUS')">Add to
+            Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -308,13 +337,16 @@
           <div class="col-md-9">
             <h3 class="dessert-title">
               <span class="dessert-name">GLYKO TOU KOUTALIOU</span>
-              <span class="dessert-price float-right">2400₸.</span>
+              <span class="dessert-price float-right">2900₸.</span>
             </h3>
             <p class="dessert-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product9', 'GLYKO TOU KOUTALIOU', 2900, 'FLAVOURS OF CYPRUS')">Add to
+            Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -333,13 +365,16 @@
           <div class="col-md-9">
             <h3 class="dessert-title">
               <span class="dessert-name">CHOCOLATE NUT SUNDAE</span>
-              <span class="dessert-price float-right">2400₸.</span>
+              <span class="dessert-price float-right">1300₸.</span>
             </h3>
             <p class="dessert-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product10', 'CHOCOLATE NUT SUNDAE', 1300, 'FROZEN DESSERTS')">Add to
+            Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -352,13 +387,16 @@
           <div class="col-md-9">
             <h3 class="dessert-title">
               <span class="dessert-name">ROCKY ROAD</span>
-              <span class="dessert-price float-right">2400₸.</span>
+              <span class="dessert-price float-right">1100₸.</span>
             </h3>
             <p class="dessert-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product11', 'ROCKY ROAD', 1100, 'FROZEN DESSERTS')">Add to
+            Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -371,13 +409,16 @@
           <div class="col-md-9">
             <h3 class="dessert-title">
               <span class="dessert-name">CHOCOLATE VELVET</span>
-              <span class="dessert-price float-right">2400₸.</span>
+              <span class="dessert-price float-right">1500₸.</span>
             </h3>
             <p class="dessert-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product12', 'CHOCOLATE VELVET', 1500, 'FROZEN DESSERTS')">Add to
+            Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -396,13 +437,16 @@
           <div class="col-md-9">
             <h3 class="dessert-title">
               <span class="dessert-name">MIMOSA FRUIT SALAD</span>
-              <span class="dessert-price float-right">2400₸.</span>
+              <span class="dessert-price float-right">2500₸.</span>
             </h3>
             <p class="dessert-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product13', 'MIMOSA FRUIT SALAD', 2500, 'FRUIT SALADS')">Add to
+            Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -415,13 +459,16 @@
           <div class="col-md-9">
             <h3 class="dessert-title">
               <span class="dessert-name">AMBROSIA SALAD</span>
-              <span class="dessert-price float-right">2400₸.</span>
+              <span class="dessert-price float-right">3000₸.</span>
             </h3>
             <p class="dessert-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product14', 'AMBROSIA SALAD', 3000, 'FRUIT SALADS')">Add to
+            Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -441,6 +488,9 @@
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product15', 'WATERMELON CAPRESE', 3200, 'FRUIT SALADS')">Add to
+            Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -459,13 +509,16 @@
           <div class="col-md-9">
             <h3 class="dessert-title">
               <span class="dessert-name">EASTERN ORANGE</span>
-              <span class="dessert-price float-right">2400₸.</span>
+              <span class="dessert-price float-right">2600₸.</span>
             </h3>
             <p class="dessert-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product16', 'EASTERN ORANGE', 2600, 'GELATIN DESSERTS')">Add to
+            Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -478,13 +531,16 @@
           <div class="col-md-9">
             <h3 class="dessert-title">
               <span class="dessert-name">MANDARIN-ORANGE</span>
-              <span class="dessert-price float-right">2400₸.</span>
+              <span class="dessert-price float-right">3200₸.</span>
             </h3>
             <p class="dessert-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product17', 'MANDARIN-ORANGE', 3200, 'GELATIN DESSERTS')">Add to
+            Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -504,6 +560,9 @@
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product18', 'TRIPLE-BERRY', 3100, 'GELATIN DESSERTS')">Add to
+            Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -522,13 +581,16 @@
           <div class="col-md-9">
             <h3 class="dessert-title">
               <span class="dessert-name">RASPBERRY STRUDEL</span>
-              <span class="dessert-price float-right">2400₸.</span>
+              <span class="dessert-price float-right">4100₸.</span>
             </h3>
             <p class="dessert-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product19', 'RASPBERRY STRUDEL', 4100, 'PASTRIES')">Add to
+            Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -541,13 +603,16 @@
           <div class="col-md-9">
             <h3 class="dessert-title">
               <span class="dessert-name">COCOA PALMIERS</span>
-              <span class="dessert-price float-right">2400₸.</span>
+              <span class="dessert-price float-right">4400₸.</span>
             </h3>
             <p class="dessert-ingredients">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product20', 'COCOA PALMIERS', 4400, 'PASTRIES')">Add to
+            Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -567,74 +632,35 @@
               at gravida lacus. Suspendisse laoreet ultrices ex, quis
               efficitur justo rhoncus sit amet.
             </p>
+            <button class="btn btn-primary float-right"
+            onclick="addToBasket('product21', 'BLUEBERRY TURNOVERS', 4150, 'PASTRIES')">Add to
+            Basket</button>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
       </div>
 
-      <!-- PUDDINGS -->
-      <div id="puddings" class="dessert-category">
-        <h2 class="banner">PUDDINGS</h2>
-        <hr class="dessert-horizontal-rule">
-        <div class="row align-items-center menu-item">
-          <div class="col-md-3 dessert-image">
-            <img
-              src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537899494/website-template-3/puddings.jpg"
-              alt="Pudding" class="rounded-circle load">
-          </div>
-          <div class="col-md-9">
-            <h3 class="dessert-title">
-              <span class="dessert-name">RASPBERRY STRUDEL</span>
-              <span class="dessert-price float-right">2400₸.</span>
-            </h3>
-            <p class="dessert-ingredients">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              at gravida lacus. Suspendisse laoreet ultrices ex, quis
-              efficitur justo rhoncus sit amet.
-            </p>
-          </div>
-        </div>
-        <hr class="dessert-horizontal-rule">
-        <div class="row align-items-center menu-item">
-          <div class="col-md-3 dessert-image">
-            <img
-              src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537899494/website-template-3/puddings.jpg"
-              alt="Pudding" class="rounded-circle load">
-          </div>
-          <div class="col-md-9">
-            <h3 class="dessert-title">
-              <span class="dessert-name">COCOA PALMIERS</span>
-              <span class="dessert-price float-right">2400₸.</span>
-            </h3>
-            <p class="dessert-ingredients">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              at gravida lacus. Suspendisse laoreet ultrices ex, quis
-              efficitur justo rhoncus sit amet.
-            </p>
-          </div>
-        </div>
-        <hr class="dessert-horizontal-rule">
-        <div class="row align-items-center menu-item">
-          <div class="col-md-3 dessert-image">
-            <img
-              src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537899494/website-template-3/puddings.jpg"
-              alt="Pudding" class="rounded-circle load">
-          </div>
-          <div class="col-md-9">
-            <h3 class="dessert-title">
-              <span class="dessert-name">RASPBERRY TURNOVERS</span>
-              <span class="dessert-price float-right">2400₸.</span>
-            </h3>
-            <p class="dessert-ingredients">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              at gravida lacus. Suspendisse laoreet ultrices ex, quis
-              efficitur justo rhoncus sit amet.
-            </p>
-          </div>
-        </div>
-        <hr class="dessert-horizontal-rule">
-      </div>
 
+    </div>
+    <div class="wooden-image">
+      <div id="busket" style="width: 70%;" class="table-responsive mx-auto pt-5">
+        <h2>Shopping Basket</h2>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Product Name</th>
+              <th scope="col">Product Type</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody id="basket">
+          </tbody>
+        </table>
+        <p>Total Price: <span id="totalPrice">0₸</span></p>
+
+        <button class="btn btn-success float-right mb-4" onclick="checkout()">Checkout</button>
+      </div>
     </div>
   </main>
   <footer class="page-footer">
@@ -719,6 +745,82 @@
     function isValidEmail(email) {
       const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
       return emailRegex.test(email);
+    }
+    //Busket JS
+    let basket = [];
+
+    function addToBasket(productId, productName, productPrice, productType) {
+      const existingItem = basket.find(item => item.id === productId);
+      if (existingItem) {
+        existingItem.quantity++;
+      } else {
+        basket.push({ id: productId, name: productName, price: productPrice, quantity: 1, type: productType });
+      }
+
+      updateBasket();
+      document.getElementById('goBusket').style.display = 'block';
+
+    }
+    function removeFromBasket(productId) {
+      const index = basket.findIndex(item => item.id === productId);
+      if (index !== -1) {
+        basket.splice(index, 1);
+      }
+
+      updateBasket();
+    }
+
+    function updateBasket() {
+      const basketElement = document.getElementById('basket');
+      const totalPriceElement = document.getElementById('totalPrice');
+      basketElement.innerHTML = '';
+      let totalPrice = 0;
+
+      basket.forEach(item => {
+        const row = basketElement.insertRow();
+        const nameCell = row.insertCell(0);
+        const typeCell = row.insertCell(1);
+        const quantityCell = row.insertCell(2);
+        const priceCell = row.insertCell(3);
+
+        nameCell.textContent = item.name;
+        typeCell.textContent = item.type;
+        quantityCell.textContent = item.quantity;
+        priceCell.textContent = `${item.price * item.quantity}₸`;
+        totalPrice += item.price * item.quantity;
+
+        const removeButton = document.createElement('button');
+        removeButton.innerHTML = '<i class="fa-solid fa-trash fa-lg" style="color: #ff1414;"></i>';
+        removeButton.className = 'btn btn-outline-danger';
+        removeButton.onclick = function () {
+          removeFromBasket(item.id);
+        };
+        priceCell.appendChild(removeButton);
+      });
+
+      totalPriceElement.textContent = `${totalPrice}₸`;
+    }
+
+    function checkout() {
+      alert('Thank you for your purchase!');
+      basket = [];
+      updateBasket();
+    }
+
+    //Scroll to Busket
+    const scrollToBusketButton = document.getElementById('goBusket');
+
+    // Scroll to the top when the button is clicked
+    scrollToBusketButton.onclick = function () {
+      scrollToBusket('busket');
+    };
+
+    function scrollToBusket(id) {
+      const element = document.getElementById(id);
+
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   </script>
 </body>
