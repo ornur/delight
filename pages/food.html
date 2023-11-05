@@ -176,16 +176,21 @@
               English breakfast is a substantial meal consisting of back bacon, eggs, British sausage, baked beans,
               bubble and squeak, fried tomato, fried mushrooms, black pudding, with fried and toasted bread on the side.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product1', 'ENGLISH BREAKFAST', 2400, 'Breakfast')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity1" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product1', 'ENGLISH BREAKFAST', 2400, 'Breakfast', 1)">Add to
+                  Basket</button>
+              </div>
+            </div>
+
           </div>
         </div>
         <hr class="food-horizontal-rule">
         <div class="row align-items-center menu-item">
           <div class="col-md-3 food-image">
-            <img
-              src="https://img.jamieoliver.com/jamieoliver/recipe-database/51430772.jpg?tr=w-170,h-200"
+            <img src="https://img.jamieoliver.com/jamieoliver/recipe-database/51430772.jpg?tr=w-170,h-200"
               alt="Breakfast" class="rounded-circle load">
           </div>
           <div class="col-md-9">
@@ -196,16 +201,20 @@
             <p class="food-ingredients">
               A classic combination, seasoned with chilli and paprika
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product2', 'BOILED EGGS', 3000, 'Breakfast')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity2" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product2', 'BOILED EGGS', 3000, 'Breakfast',2)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
         <div class="row align-items-center menu-item">
           <div class="col-md-3 food-image">
-            <img
-              src="https://img.jamieoliver.com/jamieoliver/recipe-database/51430779.jpg?tr=w-170,h-200"
+            <img src="https://img.jamieoliver.com/jamieoliver/recipe-database/51430779.jpg?tr=w-170,h-200"
               alt="Breakfast" class="rounded-circle load">
           </div>
           <div class="col-md-9">
@@ -217,9 +226,14 @@
               A traditional Caribbean morning dish is creamy banana porridge, which is cooked with green bananas, milk,
               water, sugar, and cinnamon or spices.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product3', 'BANANA PORRIDGE', 2600, 'Breakfast')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity3" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product3', 'BANANA PORRIDGE', 2600, 'Breakfast', 3)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -244,9 +258,13 @@
               A hamburger or burger is an American fast food. It is a type of sandwich with a patty of cooked ground
               meat between the two halves of a bun
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product4', 'HAMBURGER', 4930, 'Burgers')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity4" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary" onclick="addToBasket('product4', 'HAMBURGER', 4930, 'Burgers',4)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -265,9 +283,14 @@
               A cheeseburger is a hamburger with a slice of melted cheese on top of the meat patty, added near the end
               of the cooking time.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product5', 'CHEESEBURGER', 2700, 'Burgers')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity5" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary" onclick="addToBasket('product5', 'CHEESEBURGER', 2700, 'Burgers',5)">Add
+                  to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -286,9 +309,15 @@
               A burger is a patty of ground beef grilled and placed between two halves of a bun. Slices of raw onion,
               lettuce, bacon, mayonnaise, and other ingredients add flavor.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product6', 'DOUBLE DECKER', 3200, 'Burgers')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity6" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product6', 'DOUBLE DECKER', 3200, 'Burgers',6)">Add
+                  to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -317,20 +346,24 @@
               potatoes, a rich, tomatoey beef or lamb mince sauce and topped off with a deliciously creamy bechamel
               sauce. In other words, the ultimate comfort food.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product7', 'MOUSAKA', 4900, 'FLAVOURS OF CYPRUS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity7" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product7', 'MOUSAKA', 4900, 'FLAVOURS OF CYPRUS',7)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
         <div class="row align-items-center menu-item">
           <div class="col-md-3 food-image">
-            <img
-              src="https://i0.wp.com/www.onceuponachef.com/images/2023/03/souvlaki.jpg"
+            <img src="https://i0.wp.com/www.onceuponachef.com/images/2023/03/souvlaki.jpg"
               data-srcset="
                   https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_150/v1537896862/website-template-3/flavours-of-cyprus.jpg 1x,
-                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537896862/website-template-3/flavours-of-cyprus.jpg 2x"
-              alt="Flavour of Cyprus" class="rounded-circle load" width="170px" height="200px">
+                  https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_300/v1537896862/website-template-3/flavours-of-cyprus.jpg 2x" alt="Flavour of Cyprus"
+              class="rounded-circle load" width="170px" height="200px">
           </div>
           <div class="col-md-9">
             <h3 class="food-title">
@@ -340,9 +373,14 @@
             <p class="food-ingredients">
               Greek fast food consisting of small pieces of meat and sometimes vegetables grilled on a skewer.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product8', 'SOUVLAKI', 2500, 'FLAVOURS OF CYPRUS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity8" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product8', 'SOUVLAKI', 2500, 'FLAVOURS OF CYPRUS',8)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -365,9 +403,14 @@
               pearl onions are the most commonly used, but larger onions can work as well. The quantity of the onions is
               often equal in weight to the main ingredient.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product9', 'STIFADO', 2000, 'FLAVOURS OF CYPRUS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity9" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product9', 'STIFADO', 2000, 'FLAVOURS OF CYPRUS',9)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -395,9 +438,14 @@
               The T-Bone is cut from the short loin, and actually has two different steaks attached to the bone. On the
               long side is the strip.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product11', 'T-BONE STEAK', 2100, 'FROM THE GRILL')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity10" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product11', 'T-BONE STEAK', 2100, 'FROM THE GRILL',10)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -418,9 +466,14 @@
             <p class="food-ingredients">
               Rump or rump steak is meat cut from the rear end of a cow.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product12', 'RUMP STEAK', 1700, 'FROM THE GRILL')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity11" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product12', 'RUMP STEAK', 1700, 'FROM THE GRILL',11)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -442,9 +495,14 @@
               A cut of meat and especially of beef from the part of the hindquarter just in front of the round see beef
               illustration.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product10', 'SIRLOIN STEAK', 1700, 'FROM THE GRILL')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity12" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product10', 'SIRLOIN STEAK', 1700, 'FROM THE GRILL',12)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -471,9 +529,14 @@
             <p class="food-ingredients">
               It consists of spaghetti served with a sauce made from tomatoes, minced beef, garlic, wine and herbs;
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product13', 'SPAGHETTI BOLOGNESE', 2800, 'PASTA')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity13" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product13', 'SPAGHETTI BOLOGNESE', 2800, 'PASTA',13)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -495,9 +558,15 @@
               Beef Stroganoff is a popular Russian dish of small pieces of beef fillet sautéed in sour cream sauce
               together with onions and mushrooms
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product14', 'BEEF STROGANOFF', 4200, 'PASTA')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity14" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product14', 'BEEF STROGANOFF', 4200, 'PASTA',14)">Add
+                  to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -518,9 +587,14 @@
             <p class="food-ingredients">
               FETTUCCINE ALFREDO is a dish consisting of fettuccine with butter, Parmesan cheese, cream, and seasonings.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product15', 'FETTUCINE ALFREDO', 3400, 'PASTA')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity15" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product15', 'FETTUCINE ALFREDO', 3400, 'PASTA',15)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -549,9 +623,14 @@
               be beef, lamb, veal, or pork) and onion. Its contents are generally similar to those of steak and kidney
               puddings.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product16', 'STEAK &amp; KIDNEY PIE', 6400, 'PIES')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity16" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product16', 'STEAK &amp; KIDNEY PIE', 6400, 'PIES',16)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -573,9 +652,14 @@
               Tender pieces of steak are cooked with vegetables and English ale, then wrapped in the best flaky buttery
               pie crust.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product17', 'STEAK &amp; ALE PIE', 4400, 'PIES')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity17" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product17', 'STEAK &amp; ALE PIE', 4400, 'PIES',17)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -597,9 +681,14 @@
               British pie, ranked as one of the most popular types of savoury pie in Great Britain and often served in
               fish and chips restaurants.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product18', 'CHICKEN &amp; MUSHROOM PIE', 3400, 'PIES')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity18" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product18', 'CHICKEN &amp; MUSHROOM PIE', 3400, 'PIES',18)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -626,9 +715,14 @@
             <p class="food-ingredients">
               Pepperoni is a kind of spicy sausage which is often sliced and put on pizzas.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product19', 'PEPPERONI', 5400, 'PIZZAS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity19" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary" onclick="addToBasket('product19', 'PEPPERONI', 5400, 'PIZZAS',19)">Add
+                  to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -650,9 +744,14 @@
               A typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt, and
               extra-virgin olive oil.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product20', 'MARGARITA', 2500, 'PIZZAS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity20" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary" onclick="addToBasket('product20', 'MARGARITA', 2500, 'PIZZAS',20)">Add
+                  to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -674,9 +773,14 @@
               Pizza Tropicana is mix of sliced meat (Pancetta), fruit (Pineapple) and vegetables (Tomato, Onion, Olives)
               and Mozzarella cheese. This is the pizza how is prepared and made in Napoli.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product21', 'TROPICANO', 1400, 'PIZZAS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity21" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary" onclick="addToBasket('product21', 'TROPICANO', 1400, 'PIZZAS',21)">Add
+                  to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -704,9 +808,14 @@
               A creamy salad made with boiled eggs, mayonnaise, and various seasonings, often served as a sandwich
               filling or side dish.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product22', 'EGG SALAD', 1400, 'SALADS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity22" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary" onclick="addToBasket('product22', 'EGG SALAD', 1400, 'SALADS',22)">Add
+                  to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -728,9 +837,15 @@
               A classic side dish featuring diced or sliced potatoes mixed with mayonnaise, mustard, and various
               ingredients like celery, onions, and pickles.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product23', 'POTATO SALAD', 2300, 'SALADS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity23" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product23', 'POTATO SALAD', 2300, 'SALADS',23)">Add
+                  to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -752,9 +867,14 @@
               A refreshing salad that includes pomegranate seeds, mixed greens, and sometimes other ingredients like
               feta cheese, nuts, and a vinaigrette dressing.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product24', 'POMEGRANATE SALAD', 1300, 'SALADS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity24" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product24', 'POMEGRANATE SALAD', 1300, 'SALADS',24)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -782,9 +902,14 @@
               Tender and flavorful octopus that has been marinated and then grilled to perfection, typically served with
               various accompaniments.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product25', 'GRILLED OCTOPUS', 4000, 'SEAFOOD')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity25" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product25', 'GRILLED OCTOPUS', 4000, 'SEAFOOD',25)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -806,9 +931,14 @@
               Seafood items like shrimp and squid that are coated in a crispy batter and deep-fried, resulting in a
               delicious, crunchy dish.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product26', 'FRIED SHRIMP &amp; SQUID', 1500, 'SEAFOOD')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity26" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product26', 'FRIED SHRIMP &amp; SQUID', 1500, 'SEAFOOD',26)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -830,9 +960,15 @@
               fillet seasoned and cooked in the oven until tender and flaky, often accompanied by herbs, spices, or a
               flavorful sauce.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product27', 'BAKED SALMON', 1100, 'SEAFOOD')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity27" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product27', 'BAKED SALMON', 1100, 'SEAFOOD',27)">Add
+                  to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -860,9 +996,15 @@
               A brunch dish that features poached eggs served on toasted English muffins with smoked salmon and
               hollandaise sauce.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product28', 'EGGS ROYALE', 1700, 'SPECIALS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity28" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product28', 'EGGS ROYALE', 1700, 'SPECIALS',28)">Add
+                  to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -884,9 +1026,14 @@
               Thin slices of smoked salmon served on crispy or crunchy elements like crackers or chips, often garnished
               with cream cheese, capers, and herbs.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product29', 'SMOKED SALMON CRISPS', 2200, 'SPECIALS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity29" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product29', 'SMOKED SALMON CRISPS', 2200, 'SPECIALS',29)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -908,9 +1055,14 @@
               Beef short ribs slow-cooked in a flavorful liquid until they are incredibly tender and infused with rich,
               savory flavors.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product30', 'BRAISED SHORT RIBS', 4300, 'SPECIALS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity30" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product30', 'BRAISED SHORT RIBS', 4300, 'SPECIALS',30)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -938,9 +1090,14 @@
               A classic appetizer consisting of cold, cooked prawns (shrimp) served with a tangy cocktail sauce and
               garnished with lettuce and lemon wedges.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product31', 'PRAWN COCKTAIL', 5500, 'STARTERS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity31" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product31', 'PRAWN COCKTAIL', 5500, 'STARTERS',31)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -962,9 +1119,14 @@
               String cheese coated in breadcrumbs and deep-fried until golden brown, resulting in a gooey and cheesy
               snack or appetizer.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product32', 'FRIED MOZZARELLA STICKS', 4100, 'STARTERS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity32" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product32', 'FRIED MOZZARELLA STICKS', 4100, 'STARTERS',32)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -986,9 +1148,15 @@
               Slices of bread or a baguette that have been generously spread with a mixture of butter and garlic, then
               toasted or baked until crispy and aromatic.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product33', 'GARLIC BREAD', 4400, 'STARTERS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity33" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product33', 'GARLIC BREAD', 4400, 'STARTERS', 33)">Add
+                  to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -1016,9 +1184,14 @@
               A plant-based burger patty made from ingredients like vegetables, grains, and legumes, typically served in
               a bun with various toppings and condiments.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product34', 'VEGGIE BURGER', 4500, 'VEGETARIAN MEALS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity34" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product34', 'VEGGIE BURGER', 4500, 'VEGETARIAN MEALS',34)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -1037,9 +1210,14 @@
               A light and refreshing salad made with thinly sliced zucchini (courgette), often drizzled with olive oil,
               lemon juice, and garnished with herbs and cheese.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product35', 'COURGETTE CARPACCIO', 4500, 'VEGETARIAN MEALS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity35" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product35', 'COURGETTE CARPACCIO', 4500, 'VEGETARIAN MEALS',35)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="food-horizontal-rule">
@@ -1058,9 +1236,14 @@
               : A creamy Italian rice dish made with Arborio rice and a flavorful broth, often cooked with sautéed
               mushrooms and finished with butter and cheese.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product36', 'MUSHROOM RISOTTO', 3300, 'VEGETARIAN MEALS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity36" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product36', 'MUSHROOM RISOTTO', 3300, 'VEGETARIAN MEALS',36)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1074,8 +1257,8 @@
             <tr>
               <th scope="col">Product Name</th>
               <th scope="col">Product Type</th>
-              <th scope="col">Quantity</th>
-              <th scope="col">Price</th>
+              <th scope="col" class="sortable-header" onclick="sortItems('quantity')">Quantity</th>
+              <th scope="col" class="sortable-header" onclick="sortItems('price')">Price</th>
             </tr>
           </thead>
           <tbody id="basket">
@@ -1173,16 +1356,21 @@
     }
     //Busket JS
     let basket = [];
+    let isPriceSorted = false;
+    let isQuantitySorted = false;
 
-    function addToBasket(productId, productName, productPrice, productType) {
+    function addToBasket(productId, productName, productPrice, productType, inputFieldId) {
       const existingItem = basket.find(item => item.id === productId);
+      const quantityInput = document.getElementById(`quantity${inputFieldId}`);
+      const quantity = parseInt(quantityInput.value);
       if (existingItem) {
-        existingItem.quantity++;
+        existingItem.quantity += quantity;
       } else {
-        basket.push({ id: productId, name: productName, price: productPrice, quantity: 1, type: productType });
+        basket.push({ id: productId, name: productName, price: productPrice, quantity, type: productType });
       }
 
       updateBasket();
+      quantityInput.value = 1; // Reset the quantity input
       document.getElementById('goBusket').style.display = 'block';
 
     }
@@ -1245,6 +1433,19 @@
 
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    //Sorting
+    function sortItems(sortBy) {
+      if (sortBy === 'price') {
+        isPriceSorted = !isPriceSorted;
+        basket.sort((a, b) => isPriceSorted ? a.price * a.quantity - b.price * b.quantity : b.price * b.quantity - a.price * a.quantity);
+        updateBasket();
+      } else if (sortBy === 'quantity') {
+        isQuantitySorted = !isQuantitySorted;
+        basket.sort((a, b) => isQuantitySorted ? a.quantity - b.quantity : b.quantity - a.quantity);
+        updateBasket();
       }
     }
   </script>

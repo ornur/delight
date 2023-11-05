@@ -155,9 +155,14 @@
               A rich and creamy dessert made with a crust, usually a graham cracker crust, and a smooth, sweetened cream
               cheese filling. It can be topped with various toppings or flavors.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product1', 'CHEESECAKE', 1200, 'CAKES')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity1" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary" onclick="addToBasket('product1', 'CHEESECAKE', 1200, 'CAKES', 1 )">Add
+                  to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -176,9 +181,14 @@
               A moist and spiced cake made with grated carrots, often combined with nuts and raisins, and frosted with
               cream cheese icing.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product2', 'CARROT CAKE', 1500, 'CAKES')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity2" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary" onclick="addToBasket('product2', 'CARROT CAKE', 1500, 'CAKES', 2 )">Add
+                  to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -197,9 +207,15 @@
               A warm and comforting dish made by cooking oats or other grains with mashed bananas, often seasoned with
               spices like cinnamon and served as a breakfast option.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product3', 'BANANA PORRIDGE', 1700, 'CAKES')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity3" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product3', 'BANANA PORRIDGE', 1700, 'CAKES', 3)">Add
+                  to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -224,9 +240,14 @@
               Classic cookies made with chocolate chips or chunks, resulting in a delightful combination of sweet,
               buttery dough and melty chocolate.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product4', 'CHOCOLATE CHIP COOKIES', 2000, 'COOKIES')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity4" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product4', 'CHOCOLATE CHIP COOKIES', 2000, 'COOKIES',4 )">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -245,9 +266,13 @@
               Italian cookies that are baked twice, resulting in a crisp and crunchy texture, often enjoyed with coffee
               or dipped in wine.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product5', 'BISCOTTI', 1500, 'COOKIES')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity5" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary" onclick="addToBasket('product5', 'BISCOTTI', 1500, 'COOKIES', 5)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -267,11 +292,17 @@
             Cookies that are loaded with chopped nuts, such as walnuts or pecans, for a delicious crunch and nutty
             flavor.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product6', 'NUT COOKIES', 1900, 'COOKIES')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity6" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary float-right"
+                onclick="addToBasket('product6', 'NUT COOKIES', 1900, 'COOKIES',6 )">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
       </div>
+
       <hr class="dessert-horizontal-rule">
 
       <!-- FLAVOURS OF CYPRUS -->
@@ -293,9 +324,14 @@
               A Middle Eastern dessert made from milk, sugar, and a fragrant thickening agent like rice or cornstarch,
               often flavored with rose or orange blossom water.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product7', 'MAHALEBI', 2200, 'FLAVOURS OF CYPRUS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity7" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product7', 'MAHALEBI', 2200, 'FLAVOURS OF CYPRUS', 7)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -314,9 +350,14 @@
               A traditional Greek rice pudding dessert, made with rice, milk, sugar, and flavored with vanilla or
               cinnamon.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product8', 'RIZOGALO', 2400, 'FLAVOURS OF CYPRUS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity8" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product8', 'RIZOGALO', 2400, 'FLAVOURS OF CYPRUS',8 )">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -335,9 +376,14 @@
               A Greek dessert of preserved fruits or vegetables in syrup, typically served in small spoonfuls, often as
               a sweet ending to a meal.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product9', 'GLYKO TOU KOUTALIOU', 2900, 'FLAVOURS OF CYPRUS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity9" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product9', 'GLYKO TOU KOUTALIOU', 2900, 'FLAVOURS OF CYPRUS',9 )">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -362,9 +408,14 @@
               A decadent dessert featuring a scoop of ice cream, drizzled with chocolate sauce, and topped with a
               variety of nuts, creating a delightful mix of textures and flavors.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product10', 'CHOCOLATE NUT SUNDAE', 1300, 'FROZEN DESSERTS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity10" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product10', 'CHOCOLATE NUT SUNDAE', 1300, 'FROZEN DESSERTS', 10)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -383,9 +434,14 @@
               A popular dessert or confectionary treat made with chocolate, marshmallows, and nuts, often cut into
               bite-sized squares.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product11', 'ROCKY ROAD', 1100, 'FROZEN DESSERTS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity11" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product11', 'ROCKY ROAD', 1100, 'FROZEN DESSERTS', 11)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -404,9 +460,14 @@
               A rich and velvety chocolate dessert, often served as a mousse, cake, or pudding, with a smooth and
               indulgent texture.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product12', 'CHOCOLATE VELVET', 1500, 'FROZEN DESSERTS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity12" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product12', 'CHOCOLATE VELVET', 1500, 'FROZEN DESSERTS', 12)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -431,9 +492,14 @@
               A fresh and colorful fruit salad typically made with citrus fruits like oranges and grapefruits, often
               dressed with a light citrus and champagne syrup.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product13', 'MIMOSA FRUIT SALAD', 2500, 'FRUIT SALADS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity13" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product13', 'MIMOSA FRUIT SALAD', 2500, 'FRUIT SALADS', 13)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -452,9 +518,14 @@
               A classic American fruit salad made with a combination of fruits, such as oranges, pineapples, coconut,
               and maraschino cherries, often mixed with whipped cream or yogurt.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product14', 'AMBROSIA SALAD', 3000, 'FRUIT SALADS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity14" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product14', 'AMBROSIA SALAD', 3000, 'FRUIT SALADS', 14)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -473,9 +544,14 @@
               A twist on the classic Caprese salad, replacing tomatoes with watermelon, typically layered with fresh
               mozzarella, basil leaves, and drizzled with balsamic glaze.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product15', 'WATERMELON CAPRESE', 3200, 'FRUIT SALADS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity15" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product15', 'WATERMELON CAPRESE', 3200, 'FRUIT SALADS', 15)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -500,9 +576,14 @@
               A dessert or dish featuring oranges prepared in an Eastern or Mediterranean style, possibly infused with
               spices and flavors from that region.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product16', 'EASTERN ORANGE', 2600, 'GELATIN DESSERTS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity16" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product16', 'EASTERN ORANGE', 2600, 'GELATIN DESSERTS', 16)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -521,9 +602,14 @@
               A dish or dessert made with mandarin oranges, which are small, sweet citrus fruits, often used in salads,
               desserts, or as a refreshing snack.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product17', 'MANDARIN-ORANGE', 3200, 'GELATIN DESSERTS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity17" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product17', 'MANDARIN-ORANGE', 3200, 'GELATIN DESSERTS', 17)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -542,9 +628,14 @@
               A dish or dessert that features a combination of three different types of berries, such as strawberries,
               blueberries, and raspberries.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product18', 'TRIPLE-BERRY', 3100, 'GELATIN DESSERTS')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity18" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product18', 'TRIPLE-BERRY', 3100, 'GELATIN DESSERTS',18 )">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -569,9 +660,14 @@
               A pastry filled with sweet raspberry filling, often wrapped in layers of flaky dough and baked to a golden
               brown.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product19', 'RASPBERRY STRUDEL', 4100, 'PASTRIES')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity19" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product19', 'RASPBERRY STRUDEL', 4100, 'PASTRIES',19 )">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -590,9 +686,15 @@
               Palmiers are sweet, flaky pastries made from puff pastry dough, and "Cocoa Palmiers" are likely flavored
               with cocoa, providing a chocolatey twist to this classic treat.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product20', 'COCOA PALMIERS', 4400, 'PASTRIES')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity20" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product20', 'COCOA PALMIERS', 4400, 'PASTRIES',20 )">Add
+                  to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -611,9 +713,14 @@
               Pastry turnovers filled with blueberry filling, often baked until golden brown and served as a sweet treat
               or dessert.
             </p>
-            <button class="btn btn-primary float-right"
-              onclick="addToBasket('product21', 'BLUEBERRY TURNOVERS', 4150, 'PASTRIES')">Add to
-              Basket</button>
+            <div class="input-group d-flex justify-content-end">
+              <input type="number" id="quantity21" class="form-control col-1" value="1" min="1">
+              <div class="input-group-append">
+                <button class="btn btn-primary"
+                  onclick="addToBasket('product21', 'BLUEBERRY TURNOVERS', 4150, 'PASTRIES', 21)">Add to
+                  Basket</button>
+              </div>
+            </div>
           </div>
         </div>
         <hr class="dessert-horizontal-rule">
@@ -629,8 +736,8 @@
             <tr>
               <th scope="col">Product Name</th>
               <th scope="col">Product Type</th>
-              <th scope="col">Quantity</th>
-              <th scope="col">Price</th>
+              <th scope="col" class="sortable-header" onclick="sortItems('quantity')">Quantity</th>
+              <th scope="col" class="sortable-header" onclick="sortItems('price')">Price</th>
             </tr>
           </thead>
           <tbody id="basket">
@@ -727,16 +834,21 @@
     }
     //Busket JS
     let basket = [];
+    let isPriceSorted = false;
+    let isQuantitySorted = false;
 
-    function addToBasket(productId, productName, productPrice, productType) {
+    function addToBasket(productId, productName, productPrice, productType, inputFieldId) {
       const existingItem = basket.find(item => item.id === productId);
+      const quantityInput = document.getElementById(`quantity${inputFieldId}`);
+      const quantity = parseInt(quantityInput.value);
       if (existingItem) {
-        existingItem.quantity++;
+        existingItem.quantity += quantity;
       } else {
-        basket.push({ id: productId, name: productName, price: productPrice, quantity: 1, type: productType });
+        basket.push({ id: productId, name: productName, price: productPrice, quantity, type: productType });
       }
 
       updateBasket();
+      quantityInput.value = 1; // Reset the quantity input
       document.getElementById('goBusket').style.display = 'block';
 
     }
@@ -801,6 +913,18 @@
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
+      //Sorting
+      function sortItems(sortBy) {
+        if (sortBy === 'price') {
+          isPriceSorted = !isPriceSorted;
+          basket.sort((a, b) => isPriceSorted ? a.price * a.quantity - b.price * b.quantity : b.price * b.quantity - a.price * a.quantity);
+          updateBasket();
+        } else if (sortBy === 'quantity') {
+          isQuantitySorted = !isQuantitySorted;
+          basket.sort((a, b) => isQuantitySorted ? a.quantity - b.quantity : b.quantity - a.quantity);
+          updateBasket();
+        }
+      }
   </script>
 </body>
 

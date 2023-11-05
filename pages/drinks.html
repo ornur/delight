@@ -171,9 +171,13 @@
             A fortified wine that is aromatized with various botanicals, herbs, and spices. It is often served as an
             aperitif or used as a mixer in cocktails like Martinis and Negronis.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product1', 'VERMOUTH', 4300, 'APERITIFS')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity1" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product1', 'VERMOUTH', 4300, 'APERITIFS', 1)">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -185,9 +189,13 @@
             A strong, anise-flavored alcoholic beverage, typically served as an aperitif or digestif. It is popular in
             countries like Turkey and Greece.
           </p>
-          <button class="btn btn-primary float-right" onclick="addToBasket('product2', 'RAKI', 3400, 'APERITIFS')">Add
-            to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity2" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product2', 'RAKI', 3400, 'APERITIFS',2 )">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -199,9 +207,13 @@
             A type of sherry wine that is dry and nutty in flavor, aged through a solera system. It can be enjoyed as an
             aperitif or with various dishes.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product3', 'AMONTILLADO', 5400, 'APERITIFS')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity3" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product3', 'AMONTILLADO', 5400, 'APERITIFS', 3)">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
       </div>
@@ -219,9 +231,14 @@
             A renowned German brewery known for its wheat beers, offering a range of traditional and flavorful wheat
             beer options.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product4', 'SCHNEIDER WEISSE', 2300, 'BEERS')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity4" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product4', 'SCHNEIDER WEISSE', 2300, 'BEERS',4 )">Add
+                to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -233,9 +250,13 @@
             A type of German beer, specifically a Kölsch-style beer, known for its light, crisp, and refreshing
             qualities.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product5', 'FRUH KOLSCH', 1400, 'BEERS')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity5" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product5', 'FRUH KOLSCH', 1400, 'BEERS', 5)">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -247,8 +268,13 @@
             A stronger and more concentrated beer style, created through the process of freezing and removing ice to
             increase alcohol content and flavor intensity.
           </p>
-          <button class="btn btn-primary float-right" onclick="addToBasket('product6', 'EISBOCK', 2000, 'BEERS')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity6" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product6', 'EISBOCK', 2000, 'BEERS', 6)">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
       </div>
@@ -266,9 +292,13 @@
             A well-known brand of Cognac, a type of brandy produced in the Cognac region of France. Hennessy is often
             enjoyed as a sipping or mixing spirit.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product7', 'HENNESSY', 2500, 'BRANDIES')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity7" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product7', 'HENNESSY', 2500, 'BRANDIES',7 )">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -280,9 +310,13 @@
             Another distinguished Cognac producer, offering a range of premium Cognac expressions, appreciated for their
             smoothness and complexity.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product8', 'REMY MARTIN', 2050, 'BRANDIES')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity8" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product8', 'REMY MARTIN', 2050, 'BRANDIES',8 )">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -293,9 +327,13 @@
           <p class="drink-ingredients">
             A Greek brandy, often enjoyed as a digestive spirit or a base for cocktails.
           </p>
-          <button class="btn btn-primary float-right" onclick="addToBasket('product9', 'METAXAS', 3700, 'BRANDIES')">Add
-            to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity9" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product9', 'METAXAS', 3700, 'BRANDIES',9 )">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
       </div>
@@ -313,9 +351,13 @@
             A classic cocktail made with rum, cola, and a squeeze of lime, usually served over ice. It's a refreshing
             and popular drink.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product10', 'CUBA LIBRE', 1500, 'COCKTAILS')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity10" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product10', 'CUBA LIBRE', 1500, 'COCKTAILS', 10)">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -327,9 +369,14 @@
             A tropical cocktail made with rum, coconut cream or coconut milk, and pineapple juice, often blended with
             ice for a smooth and creamy consistency.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product11', 'PINA COLADA', 3200, 'COCKTAILS')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity11" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product11', 'PINA COLADA', 3200, 'COCKTAILS',11 )">Add
+                to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -341,9 +388,14 @@
             A cocktail composed of vodka and coffee liqueur (such as Kahlúa), typically served over ice in a short
             glass.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product12', 'BLACK RUSSIAN', 4200, 'COCKTAILS')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity12" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product12', 'BLACK RUSSIAN', 4200, 'COCKTAILS', 12)">Add
+                to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
       </div>
@@ -361,9 +413,14 @@
             A blended beverage made from a mixture of fruits, yogurt, milk, or juice, creating a creamy and fruity drink
             often enjoyed as a nutritious snack.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product13', 'SMOOTHIE', 5200, 'COLD BEVERAGES')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity13" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product13', 'SMOOTHIE', 5200, 'COLD BEVERAGES',13 )">Add
+                to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -375,9 +432,14 @@
             A chilled tea beverage that can be sweetened or unsweetened and is commonly flavored with lemon or other
             additives.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product14', 'ICED TEA', 1200, 'COLD BEVERAGES')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity14" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product14', 'ICED TEA', 1200, 'COLD BEVERAGES', 14)">Add
+                to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -389,9 +451,15 @@
             A non-alcoholic beverage that is carbonated and sweetened, with a wide variety of flavors, including cola,
             lemon-lime, and more.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product15', 'SOFT DRINK', 1000, 'COLD BEVERAGES')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity15" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary"
+                onclick="addToBasket('product15', 'SOFT DRINK', 1000, 'COLD BEVERAGES', 15)">Add
+                to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
       </div>
@@ -408,9 +476,13 @@
           <p class="drink-ingredients">
             A popular hot beverage made by brewing roasted coffee beans, resulting in a flavorful and caffeinated drink.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product16', 'COFFEE', 1500, 'HOT BEVERAGES')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity16" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product16', 'COFFEE', 1500, 'HOT BEVERAGES', 16)">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -421,9 +493,13 @@
           <p class="drink-ingredients">
             A hot or cold beverage made by steeping tea leaves in hot water, available in various flavors and varieties.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product17', 'TEA', 1200, 'HOT BEVERAGES')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity17" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product17', 'TEA', 1200, 'HOT BEVERAGES', 17)">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -435,9 +511,14 @@
             A warm and sweet beverage made from cocoa powder or melted chocolate mixed with milk or water, often topped
             with whipped cream or marshmallows.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product18', 'HOT CHOCOLATE', 1700, 'HOT BEVERAGES')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity18" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary"
+                onclick="addToBasket('product18', 'HOT CHOCOLATE', 1700, 'HOT BEVERAGES', 18)">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
       </div>
@@ -454,9 +535,13 @@
           <p class="drink-ingredients">
             A coffee liqueur that can be enjoyed straight, on the rocks, or as an ingredient in various cocktails.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product19', 'TIA MARIA', 2700, 'LIQUEURS')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity19" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product19', 'TIA MARIA', 2700, 'LIQUEURS',19 )">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -468,9 +553,13 @@
             An Italian herbal liqueur known for its distinct anise flavor, often used in cocktails like the Harvey
             Wallbanger.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product20', 'GALLIANO', 2200, 'LIQUEURS')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity20" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product20', 'GALLIANO', 2200, 'LIQUEURS', 20)">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -482,9 +571,13 @@
             A premium triple sec liqueur with a sweet and orange flavor, used in many cocktails, including the
             Margarita.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product21', 'COINTREAU', 3100, 'LIQUEURS')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity21" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product21', 'COINTREAU', 3100, 'LIQUEURS',21 )">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
       </div>
@@ -502,9 +595,14 @@
             A thick and creamy beverage made by blending chocolate ice cream, milk, and sometimes chocolate syrup or
             cocoa powder.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product22', 'CHOCOLATE MILKSHAKE', 4200, 'MILKSHAKES')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity22" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary"
+                onclick="addToBasket('product22', 'CHOCOLATE MILKSHAKE', 4200, 'MILKSHAKES', 22)">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -515,9 +613,14 @@
           <p class="drink-ingredients">
             A creamy shake made with bananas, milk, and often vanilla ice cream for a sweet and fruity flavor.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product23', 'BANANA MILKSHAKE', 2200, 'MILKSHAKES')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity23" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary"
+                onclick="addToBasket('product23', 'BANANA MILKSHAKE', 2200, 'MILKSHAKES',23 )">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -528,9 +631,14 @@
           <p class="drink-ingredients">
             A classic milkshake flavored with vanilla ice cream and milk, resulting in a smooth and sweet treat.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product24', 'VANILLA MILKSHAKE', 3700, 'MILKSHAKES')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity24" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary"
+                onclick="addToBasket('product24', 'VANILLA MILKSHAKE', 3700, 'MILKSHAKES',24 )">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
       </div>
@@ -548,9 +656,14 @@
             A layered cocktail typically made with Kahlúa, Baileys Irish Cream, and Grand Marnier, creating a visually
             striking and flavorful drink.
           </p>
-          <button class="btn btn-primary float-right" onclick="addToBasket('product25', 'B-52', 1500, 'SHOOTERS')">Add
-            to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity25" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product25', 'B-52', 1500, 'SHOOTERS',25 )">Add
+                to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -562,8 +675,13 @@
             A cocktail or shot that combines Tequila, Absinthe, and Tabasco sauce, known for its fiery and intense
             flavor.
           </p>
-          <button class="btn btn-primary float-right" onclick="addToBasket('product26', 'TNT', 1700, 'SHOOTERS')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity26" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product26', 'TNT', 1700, 'SHOOTERS', 26)">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -574,9 +692,14 @@
           <p class="drink-ingredients">
             A cocktail or shot featuring Absinthe and amaretto liqueur, resulting in a strong and sweet drink.
           </p>
-          <button class="btn btn-primary float-right" onclick="addToBasket('product27', 'A-BOMB', 1900, 'SHOOTERS')">Add
-            to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity27" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product27', 'A-BOMB', 1900, 'SHOOTERS',27 )">Add
+                to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
       </div>
@@ -593,9 +716,14 @@
           <p class="drink-ingredients">
             A popular brand of vodka known for its smoothness and versatility in a wide range of cocktails.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product28', 'SMIRNOFF VODKA', 4400, 'SPIRITS')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity28" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product28', 'SMIRNOFF VODKA', 4400, 'SPIRITS', 28)">Add
+                to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -607,9 +735,14 @@
             A respected tequila producer, offering high-quality tequilas, often sipped neat or used in cocktails like
             Margaritas.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product29', 'CASA NOBLE TEQUILA', 5700, 'SPIRITS')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity29" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary"
+                onclick="addToBasket('product29', 'CASA NOBLE TEQUILA', 5700, 'SPIRITS',29 )">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -620,9 +753,13 @@
           <p class="drink-ingredients">
             A well-known brand of rum, used in various cocktails and known for its versatility and quality.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product30', 'BACARDI RUM', 5900, 'SPIRITS')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity30" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product30', 'BACARDI RUM', 5900, 'SPIRITS',30 )">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
       </div>
@@ -640,9 +777,13 @@
             A popular Irish whiskey known for its smooth and approachable character, enjoyed as a sipping whiskey or in
             mixed drinks.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product31', 'JAMESON', 6900, 'WHISKEYS')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity31" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product31', 'JAMESON', 6900, 'WHISKEYS', 31)">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -654,9 +795,14 @@
             A famous Scotch whisky brand offering a range of blends and single malts, enjoyed worldwide for its quality
             and diversity.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product32', 'JOHNNIE WALKER', 7700, 'WHISKEYS')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity32" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product32', 'JOHNNIE WALKER', 7700, 'WHISKEYS', 32)">Add
+                to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -668,9 +814,14 @@
             A renowned American whiskey brand known for its distinct flavor, often enjoyed straight, on the rocks, or in
             cocktails.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product33', 'JACK DANIELS', 8700, 'WHISKEYS')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity33" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product33', 'JACK DANIELS', 8700, 'WHISKEYS', 33)">Add
+                to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
       </div>
@@ -688,8 +839,13 @@
             Meyer is a reference to Meyer lemons, a sweeter and less acidic variety of lemon, often used in cooking and
             mixology.
           </p>
-          <button class="btn btn-primary float-right" onclick="addToBasket('product34', 'MEYER', 4300, 'WINES')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity34" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product34', 'MEYER', 4300, 'WINES', 34)">Add to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -701,9 +857,14 @@
             Altesino is an Italian winery, known for producing high-quality wines, particularly from the Montalcino
             region, including renowned Brunello di Montalcino wines.
           </p>
-          <button class="btn btn-primary float-right" onclick="addToBasket('product35', 'ALTESINO', 5600, 'WINES')">Add
-            to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity35" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product35', 'ALTESINO', 5600, 'WINES',35 )">Add
+                to
+                Basket</button>
+            </div>
+          </div>
         </div>
         <hr class="drink-horizontal-rule">
         <div class="menu-item">
@@ -715,9 +876,14 @@
             Pazo de Senorans is a Spanish winery known for its Albariño wines from the Rías Baixas region, which are
             celebrated for their crisp and refreshing qualities.
           </p>
-          <button class="btn btn-primary float-right"
-            onclick="addToBasket('product36', 'PAZO DE SENORANS', 4600, 'WINES')">Add to
-            Basket</button>
+          <div class="input-group d-flex justify-content-end">
+            <input type="number" id="quantity36" class="form-control col-1" value="1" min="1">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="addToBasket('product36', 'PAZO DE SENORANS', 4600, 'WINES', 36)">Add
+                to
+                Basket</button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -730,8 +896,8 @@
             <tr>
               <th scope="col">Product Name</th>
               <th scope="col">Product Type</th>
-              <th scope="col">Quantity</th>
-              <th scope="col">Price</th>
+              <th scope="col" class="sortable-header" onclick="sortItems('quantity')">Quantity</th>
+              <th scope="col" class="sortable-header" onclick="sortItems('price')">Price</th>
             </tr>
           </thead>
           <tbody id="basket">
@@ -828,16 +994,21 @@
     }
     //Busket JS
     let basket = [];
+    let isPriceSorted = false;
+    let isQuantitySorted = false;
 
-    function addToBasket(productId, productName, productPrice, productType) {
+    function addToBasket(productId, productName, productPrice, productType, inputFieldId) {
       const existingItem = basket.find(item => item.id === productId);
+      const quantityInput = document.getElementById(`quantity${inputFieldId}`);
+      const quantity = parseInt(quantityInput.value);
       if (existingItem) {
-        existingItem.quantity++;
+        existingItem.quantity += quantity;
       } else {
-        basket.push({ id: productId, name: productName, price: productPrice, quantity: 1, type: productType });
+        basket.push({ id: productId, name: productName, price: productPrice, quantity, type: productType });
       }
 
       updateBasket();
+      quantityInput.value = 1; // Reset the quantity input
       document.getElementById('goBusket').style.display = 'block';
 
     }
@@ -900,6 +1071,18 @@
 
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    //Sorting
+    function sortItems(sortBy) {
+      if (sortBy === 'price') {
+        isPriceSorted = !isPriceSorted;
+        basket.sort((a, b) => isPriceSorted ? a.price * a.quantity - b.price * b.quantity : b.price * b.quantity - a.price * a.quantity);
+        updateBasket();
+      } else if (sortBy === 'quantity') {
+        isQuantitySorted = !isQuantitySorted;
+        basket.sort((a, b) => isQuantitySorted ? a.quantity - b.quantity : b.quantity - a.quantity);
+        updateBasket();
       }
     }
   </script>
