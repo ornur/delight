@@ -134,6 +134,8 @@
                 srcset="../media/galleries/1x/gallery-desserts-1.jpg 1x, ../media/galleries/2x/gallery-desserts-1.jpg 2x, ../media/galleries/3x/gallery-desserts-1.jpg 3x"
                 draggable="false" alt="Dessert">
             </a>
+            <button id="countButton1" class="btn btn-light"><i class="fa-regular fa-thumbs-up fa-2xl"
+              style="color: #18a0cd;"><span id="counter1" class="counter ml-2">0</span></i></button>
           </div>
           <div class="gallery-item col-md-4">
             <a href="#" data-slide-number="1">
@@ -141,6 +143,8 @@
                 srcset="../media/galleries/1x/gallery-desserts-2.jpg 1x, ../media/galleries/2x/gallery-desserts-2.jpg 2x, ../media/galleries/3x/gallery-desserts-2.jpg 3x"
                 draggable="false" alt="Dessert">
             </a>
+            <button id="countButton2" class="btn btn-light"><i class="fa-regular fa-thumbs-up fa-2xl"
+              style="color: #18a0cd;"><span id="counter2" class="counter ml-2">0</span></i></button>
           </div>
           <div class="gallery-item col-md-4">
             <a href="#" data-slide-number="2">
@@ -148,6 +152,8 @@
                 srcset="../media/galleries/1x/gallery-desserts-3.jpg 1x, ../media/galleries/2x/gallery-desserts-3.jpg 2x, ../media/galleries/3x/gallery-desserts-3.jpg 3x"
                 draggable="false" alt="Dessert">
             </a>
+            <button id="countButton3" class="btn btn-light"><i class="fa-regular fa-thumbs-up fa-2xl"
+              style="color: #18a0cd;"><span id="counter3" class="counter ml-2">0</span></i></button>
           </div>
           <div class="gallery-item col-md-4">
             <a href="#" data-slide-number="3">
@@ -155,6 +161,8 @@
                 srcset="../media/galleries/1x/gallery-desserts-4.jpg 1x, ../media/galleries/2x/gallery-desserts-4.jpg 2x, ../media/galleries/3x/gallery-desserts-4.jpg 3x"
                 draggable="false" alt="Dessert">
             </a>
+            <button id="countButton9" class="btn btn-light"><i class="fa-regular fa-thumbs-up fa-2xl"
+              style="color: #18a0cd;"><span id="counter9" class="counter ml-2">0</span></i></button>
           </div>
           <div class="gallery-item col-md-4">
             <a href="#" data-slide-number="4">
@@ -162,6 +170,8 @@
                 srcset="../media/galleries/1x/gallery-desserts-5.jpg 1x, ../media/galleries/2x/gallery-desserts-5.jpg 2x, ../media/galleries/3x/gallery-desserts-5.jpg 3x"
                 draggable="false" alt="Dessert">
             </a>
+            <button id="countButton4" class="btn btn-light"><i class="fa-regular fa-thumbs-up fa-2xl"
+              style="color: #18a0cd;"><span id="counter4" class="counter ml-2">0</span></i></button>
           </div>
           <div class="gallery-item col-md-4">
             <a href="#" data-slide-number="5">
@@ -169,6 +179,8 @@
                 srcset="../media/galleries/1x/gallery-desserts-6.jpg 1x, ../media/galleries/2x/gallery-desserts-6.jpg 2x, ../media/galleries/3x/gallery-desserts-6.jpg 3x"
                 draggable="false" alt="Dessert">
             </a>
+            <button id="countButton5" class="btn btn-light"><i class="fa-regular fa-thumbs-up fa-2xl"
+              style="color: #18a0cd;"><span id="counter5" class="counter ml-2">0</span></i></button>
           </div>
           <div class="gallery-item col-md-4">
             <a href="#" data-slide-number="6">
@@ -176,6 +188,8 @@
                 srcset="../media/galleries/1x/gallery-desserts-7.jpg 1x, ../media/galleries/2x/gallery-desserts-7.jpg 2x, ../media/galleries/3x/gallery-desserts-7.jpg 3x"
                 draggable="false" alt="Dessert">
             </a>
+            <button id="countButton6" class="btn btn-light"><i class="fa-regular fa-thumbs-up fa-2xl"
+              style="color: #18a0cd;"><span id="counter6" class="counter ml-2">0</span></i></button>
           </div>
           <div class="gallery-item col-md-4">
             <a href="#" data-slide-number="7">
@@ -183,6 +197,8 @@
                 srcset="../media/galleries/1x/gallery-desserts-8.jpg 1x, ../media/galleries/2x/gallery-desserts-8.jpg 2x, ../media/galleries/3x/gallery-desserts-8.jpg 3x"
                 draggable="false" alt="Dessert">
             </a>
+            <button id="countButton7" class="btn btn-light"><i class="fa-regular fa-thumbs-up fa-2xl"
+              style="color: #18a0cd;"><span id="counter7" class="counter ml-2">0</span></i></button>
           </div>
           <div class="gallery-item col-md-4">
             <a href="#" data-slide-number="8">
@@ -190,6 +206,8 @@
                 srcset="../media/galleries/1x/gallery-desserts-9.jpg 1x, ../media/galleries/2x/gallery-desserts-9.jpg 2x, ../media/galleries/3x/gallery-desserts-9.jpg 3x"
                 draggable="false" alt="Dessert">
             </a>
+            <button id="countButton8" class="btn btn-light"><i class="fa-regular fa-thumbs-up fa-2xl"
+              style="color: #18a0cd;"><span id="counter8" class="counter ml-2">0</span></i></button>
           </div>
         </div>
       </div>
@@ -302,6 +320,27 @@
       const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
       return emailRegex.test(email);
     }
+    // JavaScript code to handle the counters
+    function updateCounter(buttonId, counterId) {
+      const button = document.getElementById(buttonId);
+      const counter = document.getElementById(counterId);
+      let count = 0;
+
+      button.addEventListener('click', () => {
+        count++;
+        counter.textContent = `${count}`;
+      });
+    }
+
+    updateCounter('countButton1', 'counter1');
+    updateCounter('countButton2', 'counter2');
+    updateCounter('countButton3', 'counter3');
+    updateCounter('countButton4', 'counter4');
+    updateCounter('countButton5', 'counter5');
+    updateCounter('countButton6', 'counter6');
+    updateCounter('countButton7', 'counter7');
+    updateCounter('countButton8', 'counter8');
+    updateCounter('countButton9', 'counter9');
   </script>
 </body>
 
