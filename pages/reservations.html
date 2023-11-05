@@ -88,49 +88,39 @@
       <img sizes="(max-width: 2560px) 100vw, 2560px"
         src="https://res.cloudinary.com/pictureelement/image/upload/q_auto,f_auto,c_scale,w_2560/v1536179526/website-template-3/cover-reservations.jpg"
         alt="" class="reservations-form-bg">
-      <form>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputName">NAME:</label>
-            <input type="text" class="form-control" id="inputName" placeholder="John Smith">
+        <form id="form">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputName">NAME:</label>
+              <input type="text" class="form-control" id="inputName" placeholder="John Smith">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputEmail">EMAIL:</label>
+              <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
+            </div>
           </div>
-          <div class="form-group col-md-6">
-            <label for="inputEmail">EMAIL:</label>
-            <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
+          <div class="form-row">
+            <div class="form-group col-md-5">
+              <label for="inputDate">DATE:</label>
+              <input type="date" class="form-control" id="inputDate">
+            </div>
+            <div class="form-group col-md-2">
+              <label for="inputNumber">PARTY OF:</label>
+              <input type="number" min="1" max="30" class="form-control" id="inputNumber" placeholder="1">
+            </div>
+            <div class="form-group col-md-5">
+              <label for="inputPhone">PHONE:</label>
+              <input type="tel" class="form-control" id="inputPhone" required placeholder="+7 777 777 77 77">
+            </div>
           </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-5">
-            <label for="inputDate">DATE:</label>
-            <input type="date" class="form-control" id="inputDate">
+          <div class="form-group">
+            <label for="inputTextarea">MESSAGE:</label>
+            <textarea class="form-control" id="inputTextarea" rows="7" placeholder="Additional details"></textarea>
           </div>
-          <div class="form-group col-md-2">
-            <label for="inputNumber">PARTY OF:</label>
-            <input type="number" min="1" class="form-control" id="inputNumber" placeholder="1">
-          </div>
-          <div class="form-group col-md-5">
-            <label for="inputPhone">PHONE:</label>
-            <input type="tel" class="form-control" id="inputPhone" placeholder="99123456">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="inputTextarea">MESSAGE:</label>
-          <textarea class="form-control" id="inputTextarea" rows="7" placeholder="Additional details"></textarea>
-        </div>
-        <button type="button" class="btn btn-light" id="showButton">SUBMIT</button>
-      </form>
+          <button type="button" class="btn btn-light" id="showButton">SUBMIT</button>
+        </form>
+        
     </div>
-
-    <!-- The full-screen div -->
-    <div id="fullscreen" style="display: none;"></div>
-
-    <!-- The message to display -->
-    <div id="message">
-      Your order was successfully placed.
-    </div>
-
-    <!-- The overlay -->
-    <div id="overlay"></div>
 
   </main>
   <footer class="page-footer">
@@ -199,23 +189,6 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script>
-    document.getElementById("showButton").addEventListener("click", function () {
-      // Show the overlay
-      document.getElementById("overlay").style.display = "block";
-
-      // Show the message
-      document.getElementById("message").style.display = "block";
-
-      // Automatically hide the message after 3 seconds
-      setTimeout(function () {
-        document.getElementById("message").style.display = "none";
-        document.getElementById("overlay").style.display = "none";
-        // Hide the full-screen div
-        document.getElementById("fullscreen").style.display = "none";
-      }, 5000); // 3000 milliseconds = 3 seconds
-    });
-
-    // Valid email
     function validateNewsletterForm() {
       const email = document.getElementById("formEmail").value.trim();
 
@@ -232,6 +205,122 @@
       const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
       return emailRegex.test(email);
     }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+      const inputName = document.getElementById("inputName");
+      const inputEmail = document.getElementById("inputEmail");
+      const inputDate = document.getElementById("inputDate");
+      const inputNumber = document.getElementById("inputNumber");
+      const inputPhone = document.getElementById("inputPhone");
+      const submitButton = document.getElementById("showButton");
+
+      function validateName() {
+        const nameValue = inputName.value.trim();
+        const namePattern = /^[A-Z][a-zA-Z'-]+\s[A-Z][a-zA-Z'-]+(\s[A-Z][a-zA-Z'-]+)?$/;
+
+        if (namePattern.test(nameValue) && nameValue.split(' ').length <= 3) {
+          inputName.classList.add("valid");
+          inputName.classList.remove("invalid");
+        } else {
+          inputName.classList.add("invalid");
+          inputName.classList.remove("valid");
+        }
+      }
+
+      function validateEmail() {
+        const emailValue = inputEmail.value;
+        const patternEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+        if (emailValue.match(patternEmail)) {
+          inputEmail.classList.add("valid");
+          inputEmail.classList.remove("invalid");
+        } else {
+          inputEmail.classList.add("invalid");
+          inputEmail.classList.remove("valid");
+        }
+      }
+
+      function validateDate() {
+        const selectedDate = new Date(inputDate.value);
+        var today = new Date();
+        const nextMonth = new Date();
+        nextMonth.setMonth(nextMonth.getMonth() + 1);
+
+        if (selectedDate >= today && selectedDate <= nextMonth) {
+          inputDate.classList.add("valid");
+          inputDate.classList.remove("invalid");
+        } else {
+          inputDate.classList.add("invalid");
+          inputDate.classList.remove("valid");
+        }
+      }
+
+      function validateNumber() {
+        const enteredValue = parseInt(inputNumber.value, 10);
+
+        if (enteredValue >= 1 && enteredValue <= 30) {
+          inputNumber.classList.add("valid");
+          inputNumber.classList.remove("invalid");
+        } else {
+          inputNumber.classList.add("invalid");
+          inputNumber.classList.remove("valid");
+        }
+      }
+
+      function validatePhone() {
+        const phoneValue = inputPhone.value;
+        const patternPhone = /^\+\d{1,2}\s\d{3}\s\d{3}\s\d{2}\s\d{2}$/;
+
+        if (phoneValue.match(patternPhone)) {
+          inputPhone.classList.add("valid");
+          inputPhone.classList.remove("invalid");
+        } else {
+          inputPhone.classList.add("invalid");
+          inputPhone.classList.remove("valid");
+        }
+      }
+
+      function validateAndSubmit() {
+        const nameValid = !inputName.classList.contains("invalid");
+        const emailValid = !inputEmail.classList.contains("invalid");
+        const dateValid = !inputDate.classList.contains("invalid");
+        const numberValid = !inputNumber.classList.contains("invalid");
+        const phoneValid = !inputPhone.classList.contains("invalid");
+
+        const allValid = nameValid && emailValid && dateValid && numberValid && phoneValid;
+
+        if (allValid) {
+          const name = inputName.value;
+          const number = inputNumber.value;
+          const date = inputDate.value;
+
+          inputName.value = "";
+          inputEmail.value = "";
+          inputDate.value = "";
+          inputNumber.value = "";
+          inputPhone.value = "";
+          document.getElementById("inputTextarea").value = "";
+
+          inputName.classList.remove("valid", "invalid");
+          inputEmail.classList.remove("valid", "invalid");
+          inputDate.classList.remove("valid", "invalid");
+          inputNumber.classList.remove("valid", "invalid");
+          inputPhone.classList.remove("valid", "invalid");
+
+          alert("Thank you, " + name + ". You have made a reservation for " + number + " people at " + date + "! We will contact you in advance to remind about it!");
+        } else {
+          alert("Please check if the entered information is correct!");
+        }
+      }
+
+      inputName.addEventListener("keyup", validateName);
+      inputEmail.addEventListener("keyup", validateEmail);
+      inputDate.addEventListener("change", validateDate);
+      inputNumber.addEventListener("change", validateNumber);
+      inputNumber.addEventListener("keyup", validateNumber);
+      inputPhone.addEventListener("keyup", validatePhone);
+      submitButton.addEventListener("click", validateAndSubmit);
+    });
   </script>
 
 </body>
