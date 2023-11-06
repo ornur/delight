@@ -535,6 +535,7 @@ a:hover {
   min-width: 100%;
   object-fit: cover;
   height: 100%;
+  filter:brightness(40%);
 }
 
 .reservations-form>form {
@@ -560,11 +561,19 @@ a:hover {
   color: white;
 }
 
-.reservations-form input,
-.reservations-form textarea {
+.reservations-form input, .reservations-form textarea {
+  background: none !important;
   background: none !important;
   border: 3px solid white !important;
+  border: 3px solid white !important;
   color: #d9d9d9 !important;
+  color: #d9d9d9 !important;
+}
+.reservations-form input.valid {
+  border: 3px solid green !important;
+}
+.reservations-form input.invalid {
+  border: 3px solid red !important;
 }
 
 /* 
