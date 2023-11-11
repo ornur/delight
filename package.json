@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
