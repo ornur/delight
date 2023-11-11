@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         const userData = user.data;
 
         const loginLink = document.querySelector('#loginLink');
-        loginLink.innerHTML=`<a class="nav-link" href="user.html">${userData.userName}</a>`
+        loginLink.innerHTML=`<a class="nav-link" href="../user.html">${userData.userName}</a>`
 
         localStorage.setItem('userInfo', key);
     }
