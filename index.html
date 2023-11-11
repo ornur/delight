@@ -57,7 +57,7 @@
           <li class="nav-item">
             <a class="nav-link" href="pages/contact.html">Contact</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" id="loginLink">
             <a class="nav-link" href="pages/register.html">Login</a>
           </li>
         </ul>
@@ -403,10 +403,14 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
     // site scripts
     src = "js/scripts.js"
   </script>
+ <script src="./js/site.js" type="module"></script>
+  <script src="./js/db.js" type="module"></script>
+  <script src="./js/main.js"></script>
   <script>
     function validateNewsletterForm() {
       const email = document.getElementById("formEmail").value.trim();
