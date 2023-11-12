@@ -36,7 +36,7 @@ async function createUser(e){
         alert('Write correctly an email')
       }else{
         await axios.post(
-          "https://justdb-8a462-default-rtdb.europe-west1.firebasedatabase.app/data.json",
+          "https://justdb-fdea4-default-rtdb.europe-west1.firebasedatabase.app/data.json",
           {
               "userName":isUserName.value,
               "surName": isUserSurname.value,
@@ -59,7 +59,7 @@ addUser.addEventListener('click', createUser);
 let data = {};
 
 window.addEventListener('DOMContentLoaded', async ()=>{
-    const response = await axios.get("https://justdb-8a462-default-rtdb.europe-west1.firebasedatabase.app/data.json")
+    const response = await axios.get("https://justdb-fdea4-default-rtdb.europe-west1.firebasedatabase.app/data.json")
     data = response.data;
     console.log(data);
 })
@@ -93,12 +93,12 @@ usersContainer.addEventListener('click', async (event) => {
     
     if (event.target.classList.contains('delete')) {
         const userId = event.target.getAttribute('data-target');
-        await axios.delete(`https://justdb-8a462-default-rtdb.europe-west1.firebasedatabase.app/data/${userId}.json`)
+        await axios.delete(`https://justdb-fdea4-default-rtdb.europe-west1.firebasedatabase.app/data/${userId}.json`)
         location.reload()
     } else if (event.target.classList.contains('edit')) {
         const userId = event.target.getAttribute('data-target');
 
-        const user = await axios.get(`https://justdb-8a462-default-rtdb.europe-west1.firebasedatabase.app/data/${userId}.json`)
+        const user = await axios.get(`https://justdb-fdea4-default-rtdb.europe-west1.firebasedatabase.app/data/${userId}.json`)
         const userData = user.data;
         console.log(userData);
         displayEditForm(userData);
@@ -106,7 +106,7 @@ usersContainer.addEventListener('click', async (event) => {
         const editBtn = document.querySelector('#editBtn');
         editBtn.addEventListener('click', async ()=>{
             await axios.put(
-                `https://justdb-8a462-default-rtdb.europe-west1.firebasedatabase.app/data/${userId}.json`,  
+                `https://justdb-fdea4-default-rtdb.europe-west1.firebasedatabase.app/data/${userId}.json`,  
                 {
                     "userName":document.getElementById('editUserName').value,
                     "surName": document.getElementById('editSurName').value,
