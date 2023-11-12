@@ -4,7 +4,7 @@ console.log(userKey);
 const infoCont = document.querySelector('#info');
 const adminLink = document.querySelector('#admin');
 window.addEventListener('DOMContentLoaded', async ()=>{
-    const user = await axios.get(`https://justdb-fdea4-default-rtdb.europe-west1.firebasedatabase.app/data/${userKey}.json`)
+    const user = await axios.get(`https://justdb-8a462-default-rtdb.europe-west1.firebasedatabase.app/data/${userKey}.json`)
     const link = document.querySelector('#link');
     const userData = user.data;
     infoCont.innerHTML=`<p>${userData.userName}</p>
