@@ -16,7 +16,7 @@ async function createUser(e){
             alert('Write correctly an email')
           }else{
             await axios.post(
-                "https://justdb-8a462-default-rtdb.europe-west1.firebasedatabase.app/data.json",
+                "https://justdb-fdea4-default-rtdb.europe-west1.firebasedatabase.app/data.json",
                 {
                     "userName":isUserName.value,
                     "surName": isUserSurname.value,
