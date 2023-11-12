@@ -8,7 +8,7 @@ document.getElementById('login').addEventListener('submit', function(event) {
 });
 function verifyUserCredentials(username, password) {
     
-    const apiEndpoint = 'https://delight-8a462-default-rtdb.europe-west1.firebasedatabase.app/data.json';
+    const apiEndpoint = 'https://delight-fdea4-default-rtdb.europe-west1.firebasedatabase.app/data.json';
 
   
     fetch(apiEndpoint)
