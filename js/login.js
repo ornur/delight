@@ -6,7 +6,7 @@ const loginBtn = document.querySelector('#loginBtn');
 let user={};
 
  window.addEventListener('DOMContentLoaded', async () => {
-    user = await axios.get(`https://justdb-8a462-default-rtdb.europe-west1.firebasedatabase.app/data.json`)
+    user = await axios.get(`https://justdb-fdea4-default-rtdb.europe-west1.firebasedatabase.app/data.json`)
 })
 
 loginBtn.addEventListener('click', async (e)=>{
