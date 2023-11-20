@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="../css/animate.css">
   <!-- Default stylesheet -->
   <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
 </head>
 
 <body id="top">
@@ -54,9 +55,6 @@
           <li class="nav-item">
             <a class="nav-link" href="reservations.html">Reservations</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
           <li class="nav-item active">
             <a class="nav-link" href="register.html">Login</a>
           </li>
@@ -81,33 +79,21 @@
             <div class="card shadow-lg">
               <div class="card-body p-5">
                 <h1 class="fs-4 card-title fw-bold mb-4">Login</h1>
-                <form id="login" class="needs-validation">
+                <form id="login" class="loginForm">
                   <div class="mb-3">
                     <label class="mb-2 text-muted" for="email">E-Mail Address</label>
-                    <input id="email" type="email" class="form-control" name="email" required autofocus>
-                    <div class="invalid-feedback">
-                      Email is invalid
-                    </div>
+                    <input id="email" type="text" class="form-control" name="email" required autofocus>
                   </div>
-
                   <div class="mb-3">
                     <div class="mb-2 w-100">
                       <label class="text-muted" for="password">Password</label>
-                      <a href="forgot.html" class="float-end">
-                        Forgot Password?
-                      </a>
                     </div>
                     <input id="password" type="password" class="form-control" name="password" required autofocus>
-                    <div class="invalid-feedback">
-                      Password is required
-                    </div>
                   </div>
-
                   <br />
                   <button class="btn btn-primary ms-auto w-100" id="loginBtn">
                     Login
                   </button>
-
                 </form>
               </div>
               <div class="card-footer py-3 border-0">
@@ -143,8 +129,8 @@
           <h5 class="page-footer-title mt-3 mt-md-0">LOCATION</h5>
           <address>
             Delight Bar &amp; Seafood Restaurant<br>
-            24 Akti Kampani St.<br>
-            846 00, Mykonos, Greece<br>
+            24 Mangilik-el St.<br>
+            010000, Astana, Kazakhstan<br>
             <abbr title="Phone">P:</abbr> (123) 456-7890<br>
             <abbr title="Email">E:</abbr> info@Delight.com
           </address>
@@ -194,6 +180,8 @@
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="../js/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
   <!-- <script>
     (function () {
 
@@ -233,7 +221,69 @@
       return emailRegex.test(email);
     }
   </script> -->
-  
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const email = document.getElementById("email");
+      const password = document.getElementById("password");
+
+      const loginBtn = document.getElementById("loginBtn");
+
+      function validateUserEmail() {
+        const emailValue = email.value;
+        const patternEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+        if (emailValue.match(patternEmail)) {
+          email.classList.add("valid");
+          email.classList.remove("invalid");
+        } else {
+          email.classList.add("invalid");
+          email.classList.remove("valid");
+        }
+      }
+
+      function validateUserPassword() {
+        const passwordValue = password.value;
+
+        // Check if the password is at least 5 characters long
+        if (passwordValue.length >= 5) {
+          // Allow only letters, numbers, and the symbol '!'
+          const passwordPattern = /^[a-zA-Z0-9!]+$/;
+
+          // Check if the password matches the pattern
+          if (passwordPattern.test(passwordValue)) {
+            password.classList.add("valid");
+            password.classList.remove("invalid");
+          } else {
+            password.classList.add("invalid");
+            password.classList.remove("valid");
+          }
+        } else {
+          password.classList.add("invalid");
+          password.classList.remove("valid");
+        }
+      }
+
+      function validateLoginForm() {
+        const emailValid = !email.classList.contains("invalid");
+        const passwordValid = !password.classList.contains("invalid");
+
+        if (!emailValid || !passwordValid) {
+          Swal.fire({
+            title: "Error!",
+            text: "Please check if the entered information is correct!",
+            icon: "error",
+            confirmButtonText: "OK",
+          });
+        }
+      }
+      email.addEventListener("keyup", validateUserEmail);
+      password.addEventListener("keyup", validateUserPassword);
+
+      loginBtn.addEventListener("click", validateLoginForm);
+    })
+  </script>
+
 </body>
 
 </html>

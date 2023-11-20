@@ -575,6 +575,9 @@ a:hover {
 .reservations-form input.invalid {
   border: 3px solid red !important;
 }
+.reservations-form input:focus{
+  outline:none;
+}
 
 /* 
  * CONTACT
@@ -1216,4 +1219,22 @@ table {
   display: block;
   margin: 0 auto;
   margin-top: 5%;
+}
+.loginForm input:focus {
+  outline: none;
+}
+.registerForm .form-control:focus {
+  outline: none;
+}
+.loginForm input.valid {
+  border: 3px solid green;
+}
+.loginForm input.invalid {
+  border: 3px solid red;
+}
+.registerForm input.valid {
+  border: 3px solid green;
+}
+.registerForm input.invalid {
+  border: 3px solid red;
 }

@@ -55,9 +55,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="pages/reservations.html">Reservations</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pages/contact.html">Contact</a>
-              </li>
             </ul>
             <div class="ml-auto">
               <a class="nav-social mr-2" href=" "><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
@@ -96,13 +93,13 @@
 
         <div id="myModal" class="modal">
             <div class="modal-content">
-              <span class="close">&times;</span>
+              <span class="close" id="closeBtn1">&times;</span>
                 <h2>Create user</h2>
                 <form style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap:10px">
-                    <input type="text" id="username" placeholder="Username">
+                    <input type="text" id="username" placeholder="Name">
                     <input type="text" id="surname" placeholder="Surname">
                     <input type="email" id="email" placeholder="Email">
-                    <input type="password" id="password" placeholder="Password">
+                    <input type="text" id="password" placeholder="Password">
                     <input type="text" id="city" placeholder="City">
                     <div>
                       <input type="radio" name="isAdmin" value="user"> User<Br>
@@ -123,22 +120,20 @@
             <th></th>
             <th></th>
         </tr>
-        
         </table>
 
 
-        <div id="editForm">
+        <div id="editForm" class="editForm">
             <div class="editForm-content">
                 <span id="closeBtn">&times;</span>
                 <h3>Edit user</h3>
                 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                    <input type="text" id="editUserName">
-                    <input type="text" id="editSurName">
-                    <input type="email" id="editEmail">
-                    <input type="text" id="editCity">
+                    <input type="text" id="editUserName" class="invalid">
+                    <input type="text" id="editSurName" class="invalid">
+                    <input type="email" id="editEmail" class="invalid">
+                    <input type="text" id="editCity" class="invalid">
                     <label>Password</label>
-                    <input type="text" id="editPassword">
-                    
+                    <input type="text" id="editPassword" class="invalid">
                     <button id="editBtn">Edit user</button>
                 </div>
             </div>
@@ -148,5 +143,263 @@
   </main>
       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
       <script src="./js/db.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const username = document.getElementById("username");
+          const surname = document.getElementById("surname");
+          const email = document.getElementById("email");
+          const password = document.getElementById("password");
+          const city = document.getElementById("city");
+          const addUserButton = document.getElementById("addUser");
+          const closeBtn1 = document.getElementById("closeBtn1");
+
+          const editUserName = document.getElementById("editUserName");
+          const editSurName = document.getElementById("editSurName");
+          const editEmail = document.getElementById("editEmail");
+          const editPassword = document.getElementById("editPassword");
+          const editCity = document.getElementById("editCity");
+          const editBtn = document.getElementById("editBtn");
+          const closeBtn = document.getElementById("closeBtn");
+
+          function validateUserName() {
+            const usernameValue = username.value.trim();
+            const usernamePattern = /^[A-Z][a-zA-Z'-]+$/;
+
+            if (usernamePattern.test(usernameValue)) {
+                username.classList.add("valid");
+                username.classList.remove("invalid");
+            } else {
+                username.classList.add("invalid");
+                username.classList.remove("valid");
+            }
+          }
+
+          function validateUserSurname() {
+            const surnameValue = surname.value.trim();
+            const surnamePattern = /^[A-Z][a-zA-Z'-]+$/;
+
+            if (surnamePattern.test(surnameValue)) {
+                surname.classList.add("valid");
+                surname.classList.remove("invalid");
+            } else {
+                surname.classList.add("invalid");
+                surname.classList.remove("valid");
+            }
+          }
+
+          function validateUserEmail() {
+            const emailValue = email.value;
+            const patternEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if (emailValue.match(patternEmail)) {
+                email.classList.add("valid");
+                email.classList.remove("invalid");
+            } else {
+                email.classList.add("invalid");
+                email.classList.remove("valid");
+            }
+          }
+
+          function validateUserPassword() {
+            const passwordValue = password.value;
+
+            // Check if the password is at least 5 characters long
+            if (passwordValue.length >= 5) {
+                // Allow only letters, numbers, and the symbol '!'
+                const passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[a-zA-Z0-9!]+$/;
+
+                // Check if the password matches the pattern
+                if (passwordPattern.test(passwordValue)) {
+                    password.classList.add("valid");
+                    password.classList.remove("invalid");
+                } else {
+                    password.classList.add("invalid");
+                    password.classList.remove("valid");
+                }
+            } else {
+                password.classList.add("invalid");
+                password.classList.remove("valid");
+            }
+          }
+
+          function validateUserCity() {
+            const cityValue = city.value.trim();
+            // Update the city validation logic to allow letters and symbols
+            const cityPattern = /^[A-Z][a-zA-Z-]*$/;
+
+            if (cityPattern.test(cityValue)) {
+                city.classList.add("valid");
+                city.classList.remove("invalid");
+            } else {
+                city.classList.add("invalid");
+                city.classList.remove("valid");
+            }
+          }
+
+
+          function validateAndAddUser() {
+            // Add your logic to check if all fields are valid
+            // If yes, proceed to add the user, otherwise show an error message
+            const usernameValid = !username.classList.contains("invalid");
+            const surnameValid = !surname.classList.contains("invalid");
+            const emailValid = !email.classList.contains("invalid");
+            const passwordValid = !password.classList.contains("invalid");
+            const cityValid = !city.classList.contains("invalid");
+
+            const allValid = usernameValid && surnameValid && emailValid && passwordValid && cityValid;
+
+            if (allValid) {
+                // Add user logic here
+                return true;
+            } else {
+                return false;
+            }
+          }
+
+          function validateEditUserName() {
+            const editUserNameValue = editUserName.value.trim();
+            const editUserNamePattern = /^[A-Z][a-zA-Z'-]+$/;
+
+            if (editUserNamePattern.test(editUserNameValue)) {
+                editUserName.classList.add("valid");
+                editUserName.classList.remove("invalid");
+            } else {
+                editUserName.classList.add("invalid");
+                editUserName.classList.remove("valid");
+            }
+          }
+
+          function validateEditUserSurname() {
+            const editSurNameValue = editSurName.value.trim();
+            const editSurNamePattern = /^[A-Z][a-zA-Z'-]+$/;
+
+            if (editSurNamePattern.test(editSurNameValue)) {
+                editSurName.classList.add("valid");
+                editSurName.classList.remove("invalid");
+            } else {
+                editSurName.classList.add("invalid");
+                editSurName.classList.remove("valid");
+            }
+          }
+
+          function validateEditUserEmail() {
+            const editEmailValue = editEmail.value;
+            const patternEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if (editEmailValue.match(patternEmail)) {
+                editEmail.classList.add("valid");
+                editEmail.classList.remove("invalid");
+            } else {
+                editEmail.classList.add("invalid");
+                editEmail.classList.remove("valid");
+            }
+          }
+
+          function validateEditUserPassword() {
+            const editPasswordValue = editPassword.value;
+
+            // Check if the password is at least 5 characters long
+            if (editPasswordValue.length >= 5) {
+                // Allow only letters, numbers, and the symbol '!'
+                const passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[a-zA-Z0-9!]+$/;
+
+                // Check if the password matches the pattern
+                if (passwordPattern.test(editPasswordValue)) {
+                    editPassword.classList.add("valid");
+                    editPassword.classList.remove("invalid");
+                } else {
+                    editPassword.classList.add("invalid");
+                    editPassword.classList.remove("valid");
+                }
+            } else {
+                editPassword.classList.add("invalid");
+                editPassword.classList.remove("valid");
+            }
+          }
+
+          function validateEditUserCity() {
+            const editCityValue = editCity.value.trim();
+            // Update the city validation logic to allow letters and symbols
+            const cityPattern = /^[A-Z][a-zA-Z-]*$/;
+
+            if (cityPattern.test(editCityValue)) {
+                editCity.classList.add("valid");
+                editCity.classList.remove("invalid");
+            } else {
+                editCity.classList.add("invalid");
+                editCity.classList.remove("valid");
+            }
+          }
+
+          function validateAndEditUser() {
+            // Add your logic to check if all fields are valid for editing
+            // If yes, proceed to edit the user, otherwise show an error message
+            const editUserNameValid = !editUserName.classList.contains("invalid");
+            const editSurNameValid = !editSurName.classList.contains("invalid");
+            const editEmailValid = !editEmail.classList.contains("invalid");
+            const editPasswordValid = !editPassword.classList.contains("invalid");
+            const editCityValid = !editCity.classList.contains("invalid");
+
+            const allValid = editUserNameValid && editSurNameValid && editEmailValid && editPasswordValid && editCityValid;
+
+            if (allValid) {
+                // Edit user logic here
+                return true;
+            } else {
+                return false;
+            }
+          }
+
+          function clearValidation(){
+            username.classList.remove("valid");
+            username.classList.remove("invalid");
+            surname.classList.remove("valid");
+            surname.classList.remove("invalid");
+            email.classList.remove("valid");
+            email.classList.remove("invalid");
+            password.classList.remove("valid");
+            password.classList.remove("invalid");
+            city.classList.remove("valid");
+            city.classList.remove("invalid");
+
+            username.value = "";
+            surname.value = "";
+            email.value = "";
+            password.value = "";
+            city.value = "";
+          }
+
+          function clearEditValidation(){
+            editUserName.classList.remove("valid");
+            editUserName.classList.add("invalid");
+            editSurName.classList.remove("valid");
+            editSurName.classList.add("invalid");
+            editEmail.classList.remove("valid");
+            editEmail.classList.add("invalid");
+            editPassword.classList.remove("valid");
+            editPassword.classList.add("invalid");
+            editCity.classList.remove("valid");
+            editCity.classList.add("invalid");
+          }
+
+          username.addEventListener("keyup", validateUserName);
+          surname.addEventListener("keyup", validateUserSurname);
+          email.addEventListener("keyup", validateUserEmail);
+          password.addEventListener("keyup", validateUserPassword);
+          city.addEventListener("keyup", validateUserCity);
+          addUserButton.addEventListener("click", validateAndAddUser);
+
+          closeBtn1.addEventListener("click", clearValidation);
+
+          editUserName.addEventListener("keyup", validateEditUserName);
+          editSurName.addEventListener("keyup", validateEditUserSurname);
+          editEmail.addEventListener("keyup", validateEditUserEmail);
+          editPassword.addEventListener("keyup", validateEditUserPassword);
+          editCity.addEventListener("keyup", validateEditUserCity);
+          editBtn.addEventListener("click", validateAndEditUser);
+
+          closeBtn.addEventListener("click", clearEditValidation);
+        });
+      </script>
 </body>
 </html>

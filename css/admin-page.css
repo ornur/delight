@@ -11,6 +11,13 @@
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
   
+  #editForm input:focus {
+    outline:none;  
+  }
+  #myModal input:focus {
+    outline:none;
+  }
+
   /* Modal Content/Box */
   .modal-content, .editForm-content, #modalPost-content {
     background-color: #fefefe;
@@ -49,6 +56,20 @@ body{
     margin: 0 auto;
 }
 
+.modal input.valid {
+    border: 3px solid green;
+}
+.modal input.invalid {
+    border: 3px solid red;
+}
+
+.editForm input.valid {
+    border: 3px solid green;
+}
+
+.editForm input.invalid {
+    border: 3px solid red;
+}
 
 .accordion {
     background-color: #eee;

@@ -18,6 +18,43 @@ window.onclick = function(event) {
 
 var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
+function validateAndAddUser() {
+  // Add your logic to check if all fields are valid
+  // If yes, proceed to add the user, otherwise show an error message
+  const usernameValid = !document.getElementById("username").classList.contains("invalid");
+  const surnameValid = !document.getElementById("surname").classList.contains("invalid");
+  const emailValid = !document.getElementById("email").classList.contains("invalid");
+  const passwordValid = !document.getElementById("password").classList.contains("invalid");
+  const cityValid = !document.getElementById("city").classList.contains("invalid");
+
+  const allValid = usernameValid && surnameValid && emailValid && passwordValid && cityValid;
+
+  if(allValid){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+function validateAndEditUser() {
+  // Add your logic to check if all fields are valid for editing
+  // If yes, proceed to edit the user, otherwise show an error message
+  const editUserNameValid = !editUserName.classList.contains("invalid");
+  const editSurNameValid = !editSurName.classList.contains("invalid");
+  const editEmailValid = !editEmail.classList.contains("invalid");
+  const editPasswordValid = !editPassword.classList.contains("invalid");
+  const editCityValid = !editCity.classList.contains("invalid");
+
+  const allValid = editUserNameValid && editSurNameValid && editEmailValid && editPasswordValid && editCityValid;
+
+  if (allValid) {
+      // Edit user logic here
+      return true;
+  } else {
+      return false;
+  }
+}
+
 async function createUser(e){
     e.preventDefault();
     const isPassword = document.querySelector('#password')
@@ -26,31 +63,25 @@ async function createUser(e){
     const email = document.querySelector('#email')
     const city = document.querySelector('#city');
     const selectedRadio = document.querySelector('input[name="isAdmin"]:checked');
+    //check if valid
     if(!isPassword.value && !isUserName.value && !isUserSurname.value && !email.value && !city.value && !selectedRadio.value){
-      alert('Fill the form')
+      alert("Fill the form");
+    }else if(validateAndAddUser()){
+      await axios.post(
+        "https://justdb-fdea4-default-rtdb.europe-west1.firebasedatabase.app/data.json",
+        {
+            "userName":isUserName.value,
+            "surName": isUserSurname.value,
+            "password":isPassword.value,
+            "email":email.value,
+            "city":city.value,
+            "admin":selectedRadio.value
+        }
+      )
+      location.reload()
     }else{
-      if(isPassword.value.length <= 5){
-        alert('Password length should be more than 5')
-      }
-      else if(emailPattern.test(email)){
-        alert('Write correctly an email')
-      }else{
-        await axios.post(
-          "https://justdb-fdea4-default-rtdb.europe-west1.firebasedatabase.app/data.json",
-          {
-              "userName":isUserName.value,
-              "surName": isUserSurname.value,
-              "password":isPassword.value,
-              "email":email.value,
-              "city":city.value,
-              "admin":selectedRadio.value
-          }
-        )
-        location.reload()
-      }
-      
+      alert("Please check if the entered information is correct!");
     }
-    
   }
 
 const addUser = document.querySelector('#addUser');
@@ -105,17 +136,30 @@ usersContainer.addEventListener('click', async (event) => {
 
         const editBtn = document.querySelector('#editBtn');
         editBtn.addEventListener('click', async ()=>{
+
+          const isPassword = document.querySelector('#editPassword')
+          const isUserName = document.querySelector('#editUserName')
+          const isUserSurname = document.querySelector('#editSurName')
+          const email = document.querySelector('#editEmail')
+          const city = document.querySelector('#editCity');
+
+          if(!isPassword.value && !isUserName.value && !isUserSurname.value && !email.value && !city.value){
+            alert("Fill the form");
+          }else if(validateAndEditUser()){
             await axios.put(
-                `https://justdb-fdea4-default-rtdb.europe-west1.firebasedatabase.app/data/${userId}.json`,  
-                {
-                    "userName":document.getElementById('editUserName').value,
-                    "surName": document.getElementById('editSurName').value,
-                    "password":document.getElementById('editPassword').value,
-                    "email":document.getElementById('editEmail').value,
-                    "city":document.getElementById('editCity').value
-                }
+              `https://justdb-fdea4-default-rtdb.europe-west1.firebasedatabase.app/data/${userId}.json`,  
+              {
+                  "userName":document.getElementById('editUserName').value,
+                  "surName": document.getElementById('editSurName').value,
+                  "password":document.getElementById('editPassword').value,
+                  "email":document.getElementById('editEmail').value,
+                  "city":document.getElementById('editCity').value
+              }
             )
             location.reload()
+          }else{
+            alert("Please check if the entered information is correct!");
+          }
         })
     }
 });

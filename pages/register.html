@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="../css/animate.css">
   <!-- Default stylesheet -->
   <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
 </head>
 
 <body id="top">
@@ -54,9 +55,6 @@
           <li class="nav-item">
             <a class="nav-link" href="reservations.html">Reservations</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
           <li class="nav-item active">
             <a class="nav-link" href="register.html">Login</a>
           </li>
@@ -81,7 +79,7 @@
             <div class="card shadow-lg">
               <div class="card-body p-5">
                 <h1 class="fs-4 card-title fw-bold mb-4">Register</h1>
-                <form class="needs-validation">
+                <form class="registerForm">
                   <div class="mb-3">
                     <label class="mb-2 text-muted" for="name">Name</label>
                     <input id="name" type="text" class="form-control" name="name" required autofocus>
@@ -166,8 +164,8 @@
           <h5 class="page-footer-title mt-3 mt-md-0">LOCATION</h5>
           <address>
             Delight Bar &amp; Seafood Restaurant<br>
-            24 Akti Kampani St.<br>
-            846 00, Mykonos, Greece<br>
+            24 Mangilik-el St.<br>
+            010000, Astana, Kazakhstan<br>
             <abbr title="Phone">P:</abbr> (123) 456-7890<br>
             <abbr title="Email">E:</abbr> info@Delight.com
           </address>
@@ -203,13 +201,126 @@
     </div>
   </footer>
 
-  
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="../js/register.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const username = document.getElementById("name");
+      const surname = document.getElementById("surname");
+      const city = document.getElementById("city");
+      const email = document.getElementById("email");
+      const password = document.getElementById("password");
+      const createBtn = document.getElementById("createBtn");
+
+      function validateUserName() {
+        const usernameValue = username.value.trim();
+        const usernamePattern = /^[A-Z][a-zA-Z'-]+$/;
+
+        if (usernamePattern.test(usernameValue)) {
+          username.classList.add("valid");
+          username.classList.remove("invalid");
+        } else {
+          username.classList.add("invalid");
+          username.classList.remove("valid");
+        }
+      }
+
+      function validateUserSurname() {
+        const surnameValue = surname.value.trim();
+        const surnamePattern = /^[A-Z][a-zA-Z'-]+$/;
+
+        if (surnamePattern.test(surnameValue)) {
+          surname.classList.add("valid");
+          surname.classList.remove("invalid");
+        } else {
+          surname.classList.add("invalid");
+          surname.classList.remove("valid");
+        }
+      }
+
+      function validateUserEmail() {
+        const emailValue = email.value;
+        const patternEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+        if (emailValue.match(patternEmail)) {
+          email.classList.add("valid");
+          email.classList.remove("invalid");
+        } else {
+          email.classList.add("invalid");
+          email.classList.remove("valid");
+        }
+      }
+
+      function validateUserPassword() {
+        const passwordValue = password.value;
+
+        // Check if the password is at least 5 characters long
+        if (passwordValue.length >= 5) {
+          // Allow only letters, numbers, and the symbol '!'
+          const passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[a-zA-Z0-9!]+$/;
+
+          // Check if the password matches the pattern
+          if (passwordPattern.test(passwordValue)) {
+            password.classList.add("valid");
+            password.classList.remove("invalid");
+          } else {
+            password.classList.add("invalid");
+            password.classList.remove("valid");
+          }
+        } else {
+          password.classList.add("invalid");
+          password.classList.remove("valid");
+        }
+      }
+
+      function validateUserCity() {
+        const cityValue = city.value.trim();
+        // Update the city validation logic to allow letters and symbols
+        const cityPattern = /^[A-Z][a-zA-Z-]*$/;
+
+        if (cityPattern.test(cityValue)) {
+          city.classList.add("valid");
+          city.classList.remove("invalid");
+        } else {
+          city.classList.add("invalid");
+          city.classList.remove("valid");
+        }
+      }
+
+
+      function validateAndAddUser() {
+        // Add your logic to check if all fields are valid
+        // If yes, proceed to add the user, otherwise show an error message
+        const usernameValid = !username.classList.contains("invalid");
+        const surnameValid = !surname.classList.contains("invalid");
+        const emailValid = !email.classList.contains("invalid");
+        const passwordValid = !password.classList.contains("invalid");
+        const cityValid = !city.classList.contains("invalid");
+
+        const allValid = usernameValid && surnameValid && emailValid && passwordValid && cityValid;
+
+        if (allValid) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      username.addEventListener("keyup", validateUserName);
+      surname.addEventListener("keyup", validateUserSurname);
+      email.addEventListener("keyup", validateUserEmail);
+      password.addEventListener("keyup", validateUserPassword);
+      city.addEventListener("keyup", validateUserCity);
+      createBtn.addEventListener("click", validateAndAddUser);
+    })
+  </script>
 </body>
 
 </html>
