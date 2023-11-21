@@ -62,9 +62,10 @@ async function createUser(e){
     const isUserSurname = document.querySelector('#surname')
     const email = document.querySelector('#email')
     const city = document.querySelector('#city');
-    const selectedRadio = document.querySelector('input[name="isAdmin"]:checked');
+    const isAdminRadios = document.querySelectorAll('input[name="isAdmin"]');
+    const selectedRadio = Array.from(isAdminRadios).find(radio=>radio.checked);
     //check if valid
-    if(!isPassword.value && !isUserName.value && !isUserSurname.value && !email.value && !city.value && !selectedRadio.value){
+    if(!isPassword.value || !isUserName.value || !isUserSurname.value || !email.value || !city.value || !selectedRadio.value){
       alert("Fill the form");
     }else if(validateAndAddUser()){
       await axios.post(
