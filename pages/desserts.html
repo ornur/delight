@@ -62,7 +62,12 @@
           <a class="nav-social mr-2" href=" "><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
           <a class="nav-social mr-2" href=" "><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
           <a class="nav-social mr-2" href=" "><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-          <a class="nav-social" href=" "><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          <a class="nav-social mr-2" href=" "><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          <!-- BUSKET BUTTON -->
+          <a class="nav-busket" id="goBusket" style="display: none;">
+            <i class="fa-solid fa-basket-shopping fa-lg" aria-hidden="true"></i>
+            <span class="badge badge-danger" id="basketQuantity"></span>
+          </a>
         </div>
       </div>
     </nav>
@@ -124,11 +129,6 @@
         </div>
       </div>
     </div>
-
-    <!-- BUSKET BUTTON -->
-    <button id="goBusket" class="btn btn-light fixed-bottom float-right"
-      style="width: 7%; margin-left: 93%; display: none;"><i class="fa-solid fa-basket-shopping fa-2xl mb-4 ml-2"></i><i
-        class="fa-solid fa-arrow-down fa-2xl fa-bounce"></i></button>
 
     <!-- DESSERTS: DESCRIPTIONS -->
     <div class="desserts-descriptions container">
@@ -930,8 +930,16 @@
 
       updateBasket();
       quantityInput.value = 1; // Reset the quantity input
-      document.getElementById('goBusket').style.display = 'block';
+      document.getElementById('goBusket').style.display = 'inline'; // Show the basket
 
+      // Update the basket quantity in the navigation bar
+      const basketQuantityElement = document.getElementById('basketQuantity');
+      basketQuantityElement.innerText = calculateTotalQuantity();
+      basketQuantityElement.style.display = 'inline'; // Show the quantity element
+    }
+    //Update span basketQuantity
+    function calculateTotalQuantity() {
+      return basket.reduce((total, item) => total + item.quantity, 0);
     }
     function removeFromBasket(productId) {
       const index = basket.findIndex(item => item.id === productId);
