@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', async ()=>{
     const link = document.querySelector('#link');
     const userData = user.data;
     infoCont.innerHTML=`<p>${userData.userName}</p>
-    <p>${userData.surname}</p>
+    <p>${userData.surName}</p>
     <p>${userData.email}</p>
     <p>${userData.city}</p>
     <p>${userData.password}</p>`
